@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract Submission - 10th InaTS Annual Meeting 2026</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Header / Banner -->
+    <header class="bg-slate-900 text-white border-b-4 border-amber-500 py-8 px-4 sm:px-8 shadow-lg">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-amber-400 font-bold tracking-wider uppercase text-sm">Call For Abstracts</span>
+            <h1 class="text-2xl sm:text-4xl font-extrabold mt-1 text-white">10<sup>th</sup> Annual Meeting of InaTS 2026</h1>
+            <p class="text-slate-300 mt-2 text-sm sm:text-base italic">"Beyond Limits: Advancing Transplantation in Indonesia | Bridging Science, Surgery, and Sustainability"</p>
+            <div class="mt-4 flex flex-wrap justify-center gap-4 text-xs sm:text-sm text-slate-300">
+                <span>📅 <strong>20–21 November 2026</strong></span>
+                <span>📍 <strong>Royal Ambarrukmo Hotel, Yogyakarta</strong></span>
+                <span class="text-amber-400">⏰ Deadline: <strong>17 October 2026</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-4xl mx-auto my-8 p-4 sm:p-8 bg-white shadow-xl rounded-2xl">
+        
+        <!-- General Policies Box -->
+        <div class="bg-blue-50 border-l-4 border-blue-600 p-5 mb-8 rounded-r-lg">
+            <h3 class="font-bold text-blue-900 text-lg mb-2 flex items-center gap-2">
+                📋 General Policies & Submission Rules
+            </h3>
+            <ul class="text-xs sm:text-sm text-blue-800 list-disc list-inside space-y-1">
+                <li>All abstracts must be prepared according to the correct format and requirements as stated in this guideline.</li>
+                <li>Abstracts must be original, have not been published, and are not under review elsewhere.</li>
+                <li>All abstracts must be written in <strong>English</strong>.</li>
+                <li>Authors whose abstracts are accepted are required to register and present their work at the 10th Annual Meeting of InaTS 2026.</li>
+                <li>Accepted abstracts will be selected for presentation as <strong>Oral Presentation</strong> or <strong>Poster Presentation</strong>.</li>
+                <li>Notification of acceptance will be sent to the presenting author via email.</li>
+                <li>Get prizes for <strong>Best Oral Presentation</strong> & <strong>Best Poster Presentation</strong>!</li>
+            </ul>
+        </div>
+
+        <!-- FORM SUBMISSION SECTION -->
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 border-b-2 border-slate-200 pb-3 mb-6">
+            Abstract Submission Form
+        </h2>
+
+        <form id="abstractForm" class="space-y-6">
+            
+            <!-- Step 1: Presenting Author Details -->
+            <div class="border-b pb-6">
+                <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                    <span class="bg-slate-900 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm">1</span>
+                    Presenting Author Details
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Full Name (with Academic Titles) *</label>
+                        <input type="text" name="author_name" placeholder="dr. Jane Doe, Sp.PD" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-600 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Email Address *</label>
+                        <input type="email" name="author_email" placeholder="author@example.com" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-600 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Institution / Affiliation *</label>
+                        <input type="text" name="institution" placeholder="e.g. Universitas Gadjah Mada" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-600 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">WhatsApp / Phone Number *</label>
+                        <input type="tel" name="phone" placeholder="+62 812..." required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-600 outline-none">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Submission Details -->
+            <div class="border-b pb-6">
+                <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                    <span class="bg-slate-900 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm">2</span>
+                    Submission Details
+                </h3>
+                
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-1">Abstract Category *</label>
+                    <select name="category" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-600 outline-none bg-white">
+                        <option value="">-- Select Category --</option>
+                        <option value="original_research">Original Research Article</option>
+                        <option value="case_report">Case Report</option>
+                        <option value="systematic_review">Systematic Review / Meta-Analysis</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-1">Abstract Title *</label>
+                    <input type="text" name="title" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-600 outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-1">Authors & Affiliations List *</label>
+                    <textarea name="authors_list" rows="2" placeholder="e.g. Jane Doe1, John Smith2 (1. Dept. of Internal Medicine UGM...)" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-600 outline-none"></textarea>
+                </div>
+            </div>
+
+            <!-- Step 3: File Upload -->
+            <div>
+                <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                    <span class="bg-slate-900 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm">3</span>
+                    Upload Abstract File
+                </h3>
+                <div class="border-2 border-dashed border-slate-300 rounded-xl p-6 text-center hover:border-blue-500 transition bg-slate-50">
+                    <input type="file" id="abstractFile" name="abstract_file" accept=".doc,.docx,.pdf" required class="hidden" onchange="displayFileName(this)">
+                    
+                    <label for="abstractFile" class="cursor-pointer flex flex-col items-center">
+                        <svg class="w-10 h-10 text-slate-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                        </svg>
+                        <span class="text-sm font-semibold text-blue-600">Click to upload abstract file</span>
+                        <span class="text-xs text-slate-500 mt-1">Accepted Formats: DOC, DOCX, or PDF (Max 10MB)</span>
+                        <span id="fileName" class="mt-4 px-4 py-2 bg-emerald-100 text-emerald-800 font-medium text-xs rounded-lg border border-emerald-300 hidden"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="pt-4">
+                <button type="submit" id="submitBtn" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center text-lg">
+                    Submit Abstract
+                </button>
+            </div>
+
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-100 text-center text-xs text-slate-500 py-6 border-t border-slate-200">
+        <p class="font-semibold text-slate-700">InaTS 2026 Secretariat</p>
+        <p class="mt-1">Contact: Atri Wijiasih (0821-3353-5302) | dr. Anita SpPD (0853-2046-6624)</p>
+        <p class="mt-1">Email: inats2026@gmail.com | Website: www.inats2026.org</p>
+    </footer>
+
+    <!-- Script Integrasi & Pemanggil Nama File -->
+    <script>
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxx-CO6Rk44yRX4KgM9-WzmegjwyL7KBKeN-bPotE6Y55lugu6V9_vrl5MwCkwBC4rUCA/exec";
+
+        // 1. FUNGSI PENAMPIL NAMA FILE TERPILIH
+        function displayFileName(input) {
+            const fileNameContainer = document.getElementById('fileName');
+            if (input.files && input.files[0]) {
+                const fileSizeMB = (input.files[0].size / (1024 * 1024)).toFixed(2);
+                fileNameContainer.innerText = "📄 Selected File: " + input.files[0].name + " (" + fileSizeMB + " MB)";
+                fileNameContainer.classList.remove('hidden');
+            } else {
+                fileNameContainer.classList.add('hidden');
+            }
+        }
+
+        // 2. FUNGSI PENGIRIMAN DATA KE GOOGLE DRIVE
+        document.getElementById('abstractForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const fileInput = document.getElementById('abstractFile');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert("Harap pilih file abstrak terlebih dahulu!");
+                return;
+            }
+
+            submitBtn.innerText = "Mengirim data & mengunggah berkas...";
+            submitBtn.disabled = true;
+
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                const base64Data = evt.target.result.split(',')[1];
+                
+                const formData = new FormData();
+                formData.append('author_name', document.getElementsByName('author_name')[0].value);
+                formData.append('author_email', document.getElementsByName('author_email')[0].value);
+                formData.append('institution', document.getElementsByName('institution')[0].value);
+                formData.append('phone', document.getElementsByName('phone')[0].value);
+                formData.append('category', document.getElementsByName('category')[0].value);
+                formData.append('title', document.getElementsByName('title')[0].value);
+                formData.append('authors_list', document.getElementsByName('authors_list')[0].value);
+                formData.append('file_data', base64Data);
+                formData.append('file_name', file.name);
+                formData.append('file_type', file.type);
+
+                fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    body: new URLSearchParams(formData)
+                })
+                .then(res => res.json())
+                .then(response => {
+                    if (response.result === 'success') {
+                        alert("Abstrak berhasil terkirim! Terima kasih telah mendaftar di InaTS 2026.");
+                        document.getElementById('abstractForm').reset();
+                        document.getElementById('fileName').classList.add('hidden');
+                    } else {
+                        alert("Gagal mengirim data: " + response.error);
+                    }
+                })
+                .catch(err => {
+                    alert("Terjadi kesalahan koneksi. Silakan coba lagi.");
+                    console.error(err);
+                })
+                .finally(() => {
+                    submitBtn.innerText = "Submit Abstract";
+                    submitBtn.disabled = false;
+                });
+            };
+
+            reader.readAsDataURL(file);
+        });
+    </script>
+</body>
+</html>
