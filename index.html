@@ -23,6 +23,33 @@
                 <span>📅 <strong>20–21 November 2026</strong></span>
                 <span>📍 <strong>Royal Ambarrukmo Hotel, Yogyakarta</strong></span>
                 <span class="text-amber-400">⏰ Deadline: <strong>17 October 2026</strong></span>
+            <!-- Widget Countdown Timer -->
+<div class="mt-6 bg-slate-800/80 backdrop-blur-sm border border-amber-500/40 rounded-xl p-4 max-w-md mx-auto shadow-inner">
+    <p class="text-amber-400 font-bold text-xs uppercase tracking-wider mb-2">⏰ Submission Deadline Countdown</p>
+    
+    <div id="countdownBox" class="grid grid-cols-4 gap-2 text-center">
+        <div class="bg-slate-900 p-2 rounded-lg border border-slate-700">
+            <span id="cd-days" class="block text-xl sm:text-2xl font-extrabold text-white">00</span>
+            <span class="text-[10px] text-slate-400 uppercase font-semibold">Days</span>
+        </div>
+        <div class="bg-slate-900 p-2 rounded-lg border border-slate-700">
+            <span id="cd-hours" class="block text-xl sm:text-2xl font-extrabold text-white">00</span>
+            <span class="text-[10px] text-slate-400 uppercase font-semibold">Hours</span>
+        </div>
+        <div class="bg-slate-900 p-2 rounded-lg border border-slate-700">
+            <span id="cd-minutes" class="block text-xl sm:text-2xl font-extrabold text-white">00</span>
+            <span class="text-[10px] text-slate-400 uppercase font-semibold">Mins</span>
+        </div>
+        <div class="bg-slate-900 p-2 rounded-lg border border-slate-700">
+            <span id="cd-seconds" class="block text-xl sm:text-2xl font-extrabold text-amber-400">00</span>
+            <span class="text-[10px] text-slate-400 uppercase font-semibold">Secs</span>
+        </div>
+    </div>
+    
+    <p id="closedMessage" class="hidden text-red-400 font-bold text-sm mt-2">
+        ⛔ Abstract Submission is Now Closed!
+    </p>
+</div>
             </div>
         </div>
     </header>
@@ -213,6 +240,7 @@
     <script>
         const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxx-CO6Rk44yRX4KgM9-WzmegjwyL7KBKeN-bPotE6Y55lugu6V9_vrl5MwCkwBC4rUCA/exec";
 
+       
         // 1. FUNGSI PENAMPIL NAMA FILE TERPILIH
         function displayFileName(input) {
             const fileNameContainer = document.getElementById('fileName');
@@ -283,6 +311,44 @@
 
             reader.readAsDataURL(file);
         });
+         // 3. FUNGSI COUNTDOWN TIMER SAMPAI 17 OKTOBER 2026 JAM 23.59 WIB
+function startCountdown() {
+    // Target Waktu: 17 Oktober 2026 23:59:59 WIB (UTC+7)
+    const targetDate = new Date("October 17, 2026 23:59:59 GMT+0700").getTime();
+
+    const timerInterval = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance <= 0) {
+            clearInterval(timerInterval);
+            document.getElementById("countdownBox").classList.add("hidden");
+            document.getElementById("closedMessage").classList.remove("hidden");
+            
+            // Opsional: Matikan tombol submit jika deadline sudah lewat
+            const submitBtn = document.getElementById("submitBtn");
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerText = "Submission Closed";
+                submitBtn.classList.replace("bg-red-600", "bg-gray-500");
+            }
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("cd-days").innerText = days < 10 ? "0" + days : days;
+        document.getElementById("cd-hours").innerText = hours < 10 ? "0" + hours : hours;
+        document.getElementById("cd-minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+        document.getElementById("cd-seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+    }, 1000);
+}
+
+// Jalankan countdown saat halaman dimuat
+startCountdown();
     </script>
 </body>
 </html>
