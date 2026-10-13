@@ -1,270 +1,716 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abstract Submission - 10th InaTS Annual Meeting 2026</title>
-    <!-- Tailwind CSS CDN -->
+    <title>10th Annual Meeting of InaTS 2026 - Official Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        :root {
+            --inats-navy: #071b3a;
+            --inats-blue: #0b4f9c;
+            --inats-blue-2: #0f6bc5;
+            --inats-red: #c6283f;
+            --inats-red-dark: #9f1830;
+            --inats-gold: #d7a83d;
+            --inats-cream: #f7f5ef;
+            --inats-ink: #172033;
+        }
+
+        html { scroll-padding-top: 80px; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--inats-ink);
+            background:
+                radial-gradient(circle at 10% 0%, rgba(11,79,156,.08), transparent 30%),
+                radial-gradient(circle at 90% 10%, rgba(198,40,63,.07), transparent 28%),
+                linear-gradient(180deg, #f8fafc 0%, #eef4f9 48%, #f8fafc 100%);
+        }
+
+        /* InaTS visual language: navy + clinical blue + red accent + restrained gold */
+        .bg-inats-pattern {
+            background:
+                radial-gradient(circle at 1px 1px, rgba(11,79,156,.10) 1px, transparent 0) 0 0 / 26px 26px,
+                linear-gradient(180deg, #f8fafc 0%, #eef4f9 100%);
+        }
+
+        .hero-banner-bg {
+            background:
+                linear-gradient(135deg, rgba(7,27,58,.94) 0%, rgba(7,27,58,.78) 48%, rgba(159,24,48,.78) 100%),
+                url('bg.png');
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+
+        .bg-inats-card {
+            background: rgba(255,255,255,.94);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .inats-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .inats-section::before {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            right: -70px;
+            top: -70px;
+            border-radius: 999px;
+            background: rgba(11,79,156,.05);
+            pointer-events: none;
+        }
+
+        .inats-accent-line {
+            height: 4px;
+            width: 72px;
+            margin: 0 auto 14px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--inats-blue), var(--inats-red));
+        }
+
+        .inats-gradient-text {
+            background: linear-gradient(90deg, #e8c76b 0%, #fff8d9 45%, #d7a83d 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .inats-red-gradient {
+            background: linear-gradient(135deg, var(--inats-red-dark), var(--inats-red));
+        }
+
+        .inats-blue-gradient {
+            background: linear-gradient(135deg, var(--inats-navy), var(--inats-blue));
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color .2s ease;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -7px;
+            height: 2px;
+            border-radius: 99px;
+            background: var(--inats-gold);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform .2s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link:focus-visible::after { transform: scaleX(1); }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--inats-blue);
+            box-shadow: 0 0 0 3px rgba(11,79,156,.12);
+        }
+
+        @media (max-width: 640px) {
+            .hero-banner-bg { background-position: 58% top; }
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="bg-inats-pattern text-slate-800 antialiased selection:bg-red-600 selection:text-white">
 
-    <!-- Header / Banner -->
-    <header class="bg-slate-900 text-white border-b-4 border-amber-500 py-8 px-4 sm:px-8 shadow-lg">
-        <div class="max-w-4xl mx-auto text-center">
-            <span class="text-amber-400 font-bold tracking-wider uppercase text-sm">Call For Abstracts</span>
-            <h1 class="text-2xl sm:text-4xl font-extrabold mt-1 text-white">10<sup>th</sup> Annual Meeting of InaTS 2026</h1>
-            <p class="text-slate-300 mt-2 text-sm sm:text-base italic">"Beyond Limits: Advancing Transplantation in Indonesia | Bridging Science, Surgery, and Sustainability"</p>
-            <div class="mt-4 flex flex-wrap justify-center gap-4 text-xs sm:text-sm text-slate-300">
-                <span>📅 <strong>20–21 November 2026</strong></span>
-                <span>📍 <strong>Royal Ambarrukmo Hotel, Yogyakarta</strong></span>
-                <span class="text-amber-400">⏰ Deadline: <strong>17 October 2026</strong></span>
-            <!-- Widget Countdown Timer -->
-<div class="mt-6 bg-slate-800/80 backdrop-blur-sm border border-amber-500/40 rounded-xl p-4 max-w-md mx-auto shadow-inner">
-    <p class="text-amber-400 font-bold text-xs uppercase tracking-wider mb-2">⏰ Submission Deadline Countdown</p>
-    
-    <div id="countdownBox" class="grid grid-cols-4 gap-2 text-center">
-        <div class="bg-slate-900 p-2 rounded-lg border border-slate-700">
-            <span id="cd-days" class="block text-xl sm:text-2xl font-extrabold text-white">00</span>
-            <span class="text-[10px] text-slate-400 uppercase font-semibold">Days</span>
-        </div>
-        <div class="bg-slate-900 p-2 rounded-lg border border-slate-700">
-            <span id="cd-hours" class="block text-xl sm:text-2xl font-extrabold text-white">00</span>
-            <span class="text-[10px] text-slate-400 uppercase font-semibold">Hours</span>
-        </div>
-        <div class="bg-slate-900 p-2 rounded-lg border border-slate-700">
-            <span id="cd-minutes" class="block text-xl sm:text-2xl font-extrabold text-white">00</span>
-            <span class="text-[10px] text-slate-400 uppercase font-semibold">Mins</span>
-        </div>
-        <div class="bg-slate-900 p-2 rounded-lg border border-slate-700">
-            <span id="cd-seconds" class="block text-xl sm:text-2xl font-extrabold text-amber-400">00</span>
-            <span class="text-[10px] text-slate-400 uppercase font-semibold">Secs</span>
+    <!-- TOP OFFICIAL LOGO BAR -->
+    <div class="bg-white/95 backdrop-blur border-b border-slate-200 py-3 px-4 sm:px-8 shadow-sm">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <img src="InaTS_logo.jpg" alt="InaTS Logo" class="h-12 w-auto object-contain">
+                <div class="hidden sm:block border-l border-slate-300 pl-3">
+                    <h2 class="font-extrabold text-blue-950 text-sm leading-tight">10th Annual Meeting InaTS 2026</h2>
+                    <p class="text-[11px] font-medium text-blue-700">Perhimpunan Transplantasi Indonesia</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4 sm:gap-6">
+                <div class="text-[11px] text-slate-500 font-medium hidden md:block">Co-hosted & Supported by:</div>
+                <img src="Kemenkes_logo.jpg" alt="Kemenkes RI" class="h-9 sm:h-10 w-auto object-contain">
+                <img src="IDI_logo.png" alt="IDI" class="h-8 sm:h-9 w-auto object-contain">
+                <img src="UGM_logo.png" alt="Universitas Gadjah Mada" class="h-10 sm:h-11 w-auto object-contain">
+            </div>
         </div>
     </div>
-    
-    <p id="closedMessage" class="hidden text-red-400 font-bold text-sm mt-2">
-        ⛔ Abstract Submission is Now Closed!
-    </p>
-</div>
+
+    <!-- STICKY NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-[#071b3a]/95 backdrop-blur-md text-white border-b-2 border-[#d7a83d] shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#home" class="flex items-center gap-2 text-[#e5c15d] font-black text-lg sm:text-xl tracking-wider">
+                    <span>InaTS 2026</span>
+                </a>
+                <div class="hidden lg:flex items-center space-x-6 text-xs sm:text-sm font-medium">
+                    <a href="#home" class="nav-link hover:text-[#e5c15d]">Home</a>
+                    <a href="#about" class="nav-link hover:text-[#e5c15d]">About</a>
+                    <a href="#program" class="nav-link hover:text-[#e5c15d]">Scientific Agenda</a>
+                    <a href="#awards" class="nav-link hover:text-[#e5c15d]">FIIR Awards</a>
+                    <a href="#abstract" class="nav-link hover:text-[#e5c15d]">Abstract Submission</a>
+                    <a href="#registration" class="nav-link hover:text-[#e5c15d]">Registration</a>
+                    <a href="#venue" class="nav-link hover:text-[#e5c15d]">Venue</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="2nd_Announcement_InaTS2026.pdf" download class="border border-[#d7a83d] text-[#f0d27a] hover:bg-[#d7a83d] hover:text-[#071b3a] font-bold text-xs sm:text-sm px-3.5 py-2 rounded-xl transition flex items-center gap-1.5">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span>2nd Announcement</span>
+                    </a>
+                    <a href="https://ugm.id/inatsreg" target="_blank" class="bg-gradient-to-r from-[#9f1830] to-[#d7a83d] hover:from-[#86142a] hover:to-[#c2932f] text-white font-extrabold text-xs sm:text-sm px-4 py-2 rounded-xl shadow-md transition transform hover:scale-105 inline-block">
+                        Register ↗
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <header id="home" class="relative hero-banner-bg text-white py-20 lg:py-32 px-4 sm:px-8 border-b-4 border-[#d7a83d] shadow-2xl">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 bg-blue-950/80 border border-amber-400/60 text-amber-300 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full mb-6 backdrop-blur-md shadow-lg">
+                <span>📍 Royal Ambarrukmo Hotel, Yogyakarta</span>
+                <span>•</span>
+                <span>📅 20–21 November 2026</span>
+            </div>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight drop-shadow-xl">
+                10<sup>th</sup> ANNUAL MEETING OF<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#e8c76b] via-[#fff8d9] to-[#d7a83d]">INDONESIAN TRANSPLANTATION SOCIETY</span>
+            </h1>
+            <p class="text-blue-100 mt-4 text-base sm:text-xl font-medium italic max-w-3xl mx-auto drop-shadow-md">
+                "Beyond Limits: Advancing Transplantation in Indonesia — Bridging Science, Surgery, and Sustainability"
+            </p>
+
+            <!-- COUNTDOWN TIMER -->
+            <div class="mt-10 bg-blue-950/85 backdrop-blur-md border-2 border-amber-400/70 rounded-2xl p-6 max-w-xl mx-auto shadow-2xl">
+                <p class="text-amber-400 font-bold text-xs uppercase tracking-widest mb-3">
+                    ⏳ Countdown to Event Day (20 November 2026)
+                </p>
+                <div id="eventCountdownBox" class="grid grid-cols-4 gap-3 text-center">
+                    <div class="bg-blue-900/90 p-3 rounded-xl border border-blue-700 shadow-inner">
+                        <span id="ev-days" class="block text-2xl sm:text-4xl font-black text-white">00</span>
+                        <span class="text-[10px] text-blue-200 font-bold uppercase tracking-wider">Days</span>
+                    </div>
+                    <div class="bg-blue-900/90 p-3 rounded-xl border border-blue-700 shadow-inner">
+                        <span id="ev-hours" class="block text-2xl sm:text-4xl font-black text-white">00</span>
+                        <span class="text-[10px] text-blue-200 font-bold uppercase tracking-wider">Hours</span>
+                    </div>
+                    <div class="bg-blue-900/90 p-3 rounded-xl border border-blue-700 shadow-inner">
+                        <span id="ev-mins" class="block text-2xl sm:text-4xl font-black text-white">00</span>
+                        <span class="text-[10px] text-blue-200 font-bold uppercase tracking-wider">Mins</span>
+                    </div>
+                    <div class="bg-blue-900/90 p-3 rounded-xl border border-blue-700 shadow-inner">
+                        <span id="ev-secs" class="block text-2xl sm:text-4xl font-black text-amber-400">00</span>
+                        <span class="text-[10px] text-blue-200 font-bold uppercase tracking-wider">Secs</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA BUTTONS -->
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="https://ugm.id/inatsreg" target="_blank" class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-950 font-black text-sm sm:text-base px-8 py-3.5 rounded-xl shadow-xl transition transform hover:-translate-y-0.5">
+                    Register Symposium (ugm.id/inatsreg) ↗
+                </a>
+                <a href="2nd_Announcement_InaTS2026.pdf" download class="bg-blue-950/80 hover:bg-blue-900 text-amber-300 border border-amber-400/60 font-bold text-sm sm:text-base px-7 py-3.5 rounded-xl shadow-lg transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Download 2nd Announcement
+                </a>
             </div>
         </div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="max-w-4xl mx-auto my-8 p-4 sm:p-8 bg-white shadow-xl rounded-2xl">
-        
-        <!-- General Policies Box -->
-        <div class="bg-blue-50 border-l-4 border-blue-600 p-5 mb-8 rounded-r-lg">
-            <h3 class="font-bold text-blue-900 text-lg mb-2 flex items-center gap-2">
-                📋 General Policies & Submission Rules
-            </h3>
-            <ul class="text-xs sm:text-sm text-blue-800 list-disc list-inside space-y-1">
-                <li>All abstracts must be prepared according to the correct format and requirements as stated in this guideline.</li>
-                <li>Abstracts must be original, have not been published, and are not under review elsewhere.</li>
-                <li>All abstracts must be written in <strong>English</strong>.</li>
-                <li>Authors whose abstracts are accepted are required to register and present their work at the 10th Annual Meeting of InaTS 2026.</li>
-                <li>Accepted abstracts will be selected for presentation as <strong>Oral Presentation</strong> or <strong>Poster Presentation</strong>.</li>
-                <li>Notification of acceptance will be sent to the presenting author via email.</li>
-                <li>Get prizes for <strong>Best Oral Presentation</strong> & <strong>Best Poster Presentation</strong>!</li>
-            </ul>
-        </div>
 
-        <!-- ========================================================= -->
-        <!-- SUBMISSION GUIDELINES / SCIENTIFIC COMPETITION RULES (TEKS & GAMBAR) -->
-        <!-- ========================================================= -->
-        <div class="mb-10 bg-slate-50 border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-sm">
+
+        <!-- ABOUT & HIGHLIGHTS -->
+        <section id="about" class="inats-section bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-slate-200">
+            <div class="max-w-3xl mx-auto text-center mb-8">
+                <div class="inats-accent-line"></div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Why Attend InaTS 2026?</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Comprehensive discussions on kidney, liver, cornea, and bone marrow transplantation with national & international experts.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                <div class="bg-blue-50 border border-blue-100 p-5 rounded-2xl shadow-sm">
+                    <span class="text-3xl mb-2 block">🌐</span>
+                    <h4 class="font-bold text-blue-900 text-sm">World-Class Program</h4>
+                </div>
+                <div class="bg-amber-50 border border-amber-100 p-5 rounded-2xl shadow-sm">
+                    <span class="text-3xl mb-2 block">👨‍⚕️</span>
+                    <h4 class="font-bold text-amber-900 text-sm">Top Experts</h4>
+                </div>
+                <div class="bg-emerald-50 border border-emerald-100 p-5 rounded-2xl shadow-sm">
+                    <span class="text-3xl mb-2 block">🤝</span>
+                    <h4 class="font-bold text-emerald-900 text-sm">Networking</h4>
+                </div>
+                <div class="bg-purple-50 border border-purple-100 p-5 rounded-2xl shadow-sm">
+                    <span class="text-3xl mb-2 block">🏆</span>
+                    <h4 class="font-bold text-purple-900 text-sm">Scientific Awards</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCIENTIFIC AGENDA (DAY 1 & DAY 2) -->
+        <section id="program" class="inats-section bg-white rounded-2xl p-6 sm:p-10 shadow-md border border-slate-200">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Symposium Program Details</span>
+                <div class="inats-accent-line"></div>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-1">Scientific Agenda</h2>
+                <p class="text-slate-600 text-sm mt-2">Royal Ambarrukmo Hotel, Yogyakarta | 20–21 November 2026</p>
+            </div>
+
+            <!-- DAY 1 AGENDA -->
+            <div class="mb-12 border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                <div class="bg-blue-900 text-white p-4 sm:p-6 flex flex-wrap justify-between items-center gap-2">
+                    <div>
+                        <span class="bg-amber-500 text-slate-950 font-extrabold text-xs px-3 py-1 rounded-full uppercase">Day One</span>
+                        <h3 class="text-xl font-bold mt-2">Friday, 20 November 2026</h3>
+                    </div>
+                    <span class="text-xs text-blue-200 border border-blue-700 px-3 py-1.5 rounded-lg">Royal Ambarrukmo Yogyakarta</span>
+                </div>
+
+                <div class="divide-y divide-slate-100 p-4 sm:p-6 space-y-6 text-sm">
+                    <div class="bg-slate-50 p-4 rounded-xl border-l-4 border-amber-500">
+                        <span class="font-bold text-amber-700 text-xs uppercase tracking-wider block">Plenary Lecture 1</span>
+                        <h4 class="font-extrabold text-slate-900 text-base mt-1">From Policy to Practice: Assessing Government Readiness for Deceased Donor Programs and the National Transplant Registry in Indonesia</h4>
+                    </div>
+
+                    <div class="pt-4">
+                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Session 1</span>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">The Art of Modern Kidney Transplant Surgery: From Scarless Donor Nephrectomy to Optimal Recipient Implantation</h4>
+                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
+                            <li>No Scar, No Compromise: Transvaginal Natural Orifice Specimen Extraction (NOSE) and Laparoscopic Donor Nephrectomy — Technique, Safety, and Donor Experience</li>
+                            <li>The Recipient Side of Success: Surgical Technique, Anatomical Considerations, and Technical Pitfalls in Kidney Transplantation</li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-4">
+                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Session 2</span>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">Dead Donor Protocol in Practice: Bridging Critical Care and Transplantation in Indonesia</h4>
+                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
+                            <li>Brain Death Declaration and Donor Optimization: What Every Intensivist Must Know Before the Transplant Team Arrives</li>
+                            <li>Keeping the Organs Alive: Anesthetic and Hemodynamic Management of the Brain-Dead Donor for Optimal Organ Procurement</li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-4">
+                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Session 3</span>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">Advancing Transplantation in the Era of Precision Medicine: Optimizing Long-Term Outcomes</h4>
+                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
+                            <li>Beyond Therapeutic Levels: Personalizing Tacrolimus Therapy to Improve Long-Term Graft Survival</li>
+                            <li>The Future of Immunosuppression in Kidney Transplantation: Balancing Rejection Prevention, Infection Risk, and Graft Longevity</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 2 AGENDA -->
+            <div class="border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                <div class="bg-slate-900 text-white p-4 sm:p-6 flex flex-wrap justify-between items-center gap-2">
+                    <div>
+                        <span class="bg-amber-500 text-slate-950 font-extrabold text-xs px-3 py-1 rounded-full uppercase">Day Two</span>
+                        <h3 class="text-xl font-bold mt-2">Saturday, 21 November 2026</h3>
+                    </div>
+                    <span class="text-xs text-slate-400 border border-slate-700 px-3 py-1.5 rounded-lg">Royal Ambarrukmo Yogyakarta</span>
+                </div>
+
+                <div class="divide-y divide-slate-100 p-4 sm:p-6 space-y-6 text-sm">
+                    <div class="bg-slate-50 p-4 rounded-xl border-l-4 border-amber-500">
+                        <span class="font-bold text-amber-700 text-xs uppercase tracking-wider block">Plenary Lecture 2</span>
+                        <h4 class="font-extrabold text-slate-900 text-base mt-1">Building the Foundation for Deceased Organ Donation in Indonesia: Legal Frameworks, Ethical Considerations, and System Readiness</h4>
+                    </div>
+
+                    <div class="pt-4">
+                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Session 4</span>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">Advancing Hematopoietic Stem Cell Transplantation in Indonesia</h4>
+                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
+                            <li>Real World Challenges in Developing Autologous Stem Cell Transplantation at Dr. Sardjito General Hospital</li>
+                            <li>Karnofi Hospital's Experience in Developing a Hematopoietic Stem Cell Transplant Program</li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-4">
+                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Session 5</span>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">Beyond Age Barriers: Advancing Pediatric Kidney Transplantation in Indonesia</h4>
+                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
+                            <li>Small Patient, Complex Surgery: Donor Preparation, Surgical Technique, and Perioperative Challenges</li>
+                            <li>Immunosuppression Strategies in Pediatric Kidney Transplant Recipients: Balancing Efficacy, Growth, and Safety</li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-4">
+                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Session 6</span>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">Silent Threats After Transplantation: Mastering Viral and Fungal Infection Management</h4>
+                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
+                            <li>The CMV Dilemma in Kidney Transplant Recipients: Prevention & Treatment Strategies</li>
+                            <li>Invasive Fungal Infections After Kidney Transplantation: Diagnostic Pearls and Antifungal Selection</li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-4">
+                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Session 7</span>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">Unlocking Compatibility: The Laboratory's Critical Role from HLA Profiling to Desensitization</h4>
+                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
+                            <li>Comprehensive HLA Typing, Crossmatch, and Donor-Specific Antibody Interpretation</li>
+                            <li>Therapeutic Plasmapheresis in Overcoming HLA Barriers Before Transplantation</li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-4">
+                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Session 8</span>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">Elevating Care: The Future of Pediatric Living Donor Liver Transplantation</h4>
+                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
+                            <li>Advancing Pediatric Liver Transplantation Through Surgical and Hepatological Excellence</li>
+                            <li>Surgical Techniques and Complication Management in Small Vessel Pediatric Liver Transplants</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FIIR AWARDS SECTION -->
+        <section id="awards" class="bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white rounded-2xl p-6 sm:p-10 shadow-xl border border-slate-800">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Presented by Fahrul Institute for Innovation and Research (FIIR)</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold mt-1 text-white">Scientific FIIR Awards 2026</h2>
+                <p class="text-slate-300 text-sm mt-2">Proudly supporting excellence in research, innovation, and scientific paper presentation!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-900/90 border-2 border-amber-400 rounded-2xl p-6 text-center shadow-lg relative overflow-hidden">
+                    <span class="bg-amber-400 text-slate-950 text-[10px] font-black px-3 py-1 rounded-full uppercase absolute top-3 right-3">Top Prize</span>
+                    <h3 class="font-black text-amber-300 text-lg">Grand Winner</h3>
+                    <p class="text-3xl font-extrabold text-white my-2">IDR 12,000,000</p>
+                    <p class="text-xs text-amber-200 font-semibold">+ Q1 Journal Voucher (USD 2,000)</p>
+                </div>
+
+                <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 text-center">
+                    <h3 class="font-bold text-slate-200 text-lg">First Runner-Up</h3>
+                    <p class="text-3xl font-extrabold text-white my-2">IDR 9,000,000</p>
+                    <p class="text-xs text-slate-400">+ Q1 Journal Voucher (USD 2,000)</p>
+                </div>
+
+                <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 text-center">
+                    <h3 class="font-bold text-slate-200 text-lg">Second Runner-Up</h3>
+                    <p class="text-3xl font-extrabold text-white my-2">IDR 7,000,000</p>
+                    <p class="text-xs text-slate-400">+ Q1 Journal Voucher (USD 2,000)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABSTRACT SUBMISSION SECTION -->
+        <section id="abstract" class="inats-section bg-white rounded-2xl p-6 sm:p-10 shadow-xl border border-slate-200">
             
-            <!-- Jika ingin pakai tampilan gambar fisik poster di atasnya: -->
-            <div class="mb-6 rounded-xl overflow-hidden shadow border border-slate-300">
-                <img src="InaTS ilmiah Inggris crop.jpg" alt="Scientific Competition Rules InaTS 2026" class="w-full h-auto">
-            </div>
-
-            <h2 class="text-xl sm:text-2xl font-extrabold text-blue-900 border-b-2 border-blue-200 pb-3 mb-6 text-center">
-                SCIENTIFIC COMPETITION RULES - InaTS 2026
-            </h2>
-
-            <!-- Grid General & Specific Provisions -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 text-xs sm:text-sm">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <span class="text-red-600 font-bold text-xs uppercase tracking-widest">Call For Abstracts</span>
+                <div class="inats-accent-line"></div>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-1">Abstract Submission Portal</h2>
                 
-                <!-- General Provisions -->
-                <div class="bg-white p-4 rounded-xl border border-blue-200 shadow-sm">
-                    <h3 class="font-bold text-blue-900 text-base mb-3 pb-2 border-b border-blue-100 flex items-center gap-2">
-                        <span>📘</span> General Provisions
-                    </h3>
-                    <ol class="list-decimal list-inside space-y-2 text-slate-700">
-                        <li>Accepted article types: <strong>Case Report</strong>, <strong>Original Article (research)</strong>, and <strong>Systematic Review/Meta-Analysis</strong>.</li>
-                        <li>Abstracts must be original and free from plagiarism.</li>
-                        <li>Abstracts must be written in English, using proper grammar and academic language.</li>
-                        <li>The use of materials protected by Intellectual Property Rights (IPR) is strictly prohibited.</li>
-                        <li>Reviewers will assess submissions and determine participants for oral or poster presentations.</li>
-                        <li>The decision of the jury is final and cannot be contested.</li>
-                        <li>Winners will be announced on <strong>Sunday, 22 November 2026</strong>.</li>
-                    </ol>
+                <div class="mt-6 bg-slate-950 text-white rounded-2xl p-5 border-2 border-amber-500/50 shadow-inner max-w-md mx-auto">
+                    <p class="text-amber-400 font-bold text-xs uppercase tracking-wider mb-2">⏰ Abstract Deadline: 17 October 2026 (23.59 WIB)</p>
+                    <div id="countdownBox" class="grid grid-cols-4 gap-2 text-center">
+                        <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800"><span id="cd-days" class="block text-2xl font-bold text-white">00</span><span class="text-[9px] text-slate-400 uppercase font-semibold">Days</span></div>
+                        <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800"><span id="cd-hours" class="block text-2xl font-bold text-white">00</span><span class="text-[9px] text-slate-400 uppercase font-semibold">Hours</span></div>
+                        <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800"><span id="cd-minutes" class="block text-2xl font-bold text-white">00</span><span class="text-[9px] text-slate-400 uppercase font-semibold">Mins</span></div>
+                        <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800"><span id="cd-seconds" class="block text-2xl font-bold text-amber-400">00</span><span class="text-[9px] text-slate-400 uppercase font-semibold">Secs</span></div>
+                    </div>
+                    <p id="closedMessage" class="hidden text-red-400 font-bold text-sm mt-2">
+                        ⛔ Abstract Submission is Now Closed!
+                    </p>
                 </div>
-
-                <!-- Specific Provisions -->
-                <div class="bg-white p-4 rounded-xl border border-red-200 shadow-sm">
-                    <h3 class="font-bold text-red-900 text-base mb-3 pb-2 border-b border-red-100 flex items-center gap-2">
-                        <span>📕</span> Specific Provisions
-                    </h3>
-                    <ol class="list-decimal list-inside space-y-2 text-slate-700">
-                        <li>All participants must be registered participants of the InaTS 2026 symposium.</li>
-                        <li>Abstract submission must be made through the official website.</li>
-                        <li>Deadline: <strong>17 October 2026 at 24.00 WIB</strong> (Indonesian Western Time).</li>
-                        <li>Participants may submit more than one abstract.</li>
-                        <li>Certificates will only be issued to the presenting (first) author after submitting the abstract and e-poster.</li>
-                    </ol>
-                </div>
-
             </div>
 
-            <!-- Abstract-Specific Provisions -->
-            <div class="bg-blue-900 text-white p-5 rounded-xl shadow-sm text-xs sm:text-sm">
-                <h3 class="font-bold text-amber-400 text-base mb-3 flex items-center gap-2 border-b border-blue-800 pb-2">
-                    <span>📝</span> Abstract-Specific Formatting Provisions
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-5 mb-8 rounded-r-xl">
+                <h3 class="font-bold text-blue-900 text-base mb-2 flex items-center gap-2">
+                    📋 General Policies & Submission Rules
                 </h3>
-                <ul class="list-disc list-inside space-y-2 text-slate-200">
-                    <li>The abstract must be written in <strong>1 (one) page</strong> on <strong>A4 paper</strong>.</li>
-                    <li><strong>Margins:</strong> Left 4 cm, Right 3 cm, Top 3 cm, Bottom 3 cm.</li>
-                    <li><strong>Title & Authors:</strong> Times New Roman, 12 pt, italic for paper title. Presenting author & co-authors (max 9 co-authors) in Times New Roman, 10 pt bold/regular. Single line spacing (1.0).</li>
-                    <li><strong>Main Content:</strong> Times New Roman, 10 pt, single spacing. Section titles in bold.</li>
-                    <li><strong class="text-amber-300">Word Count Limit:</strong> The abstract <strong>must not exceed 300 words</strong>.</li>
+                <ul class="text-xs sm:text-sm text-blue-800 list-disc list-inside space-y-1">
+                    <li>All abstracts must be prepared according to the correct format and requirements as stated in this guideline.</li>
+                    <li>Abstracts must be original, have not been published, and are not under review elsewhere.</li>
+                    <li>All abstracts must be written in <strong>English</strong>.</li>
+                    <li>Authors whose abstracts are accepted are required to register and present their work at the 10th Annual Meeting of InaTS 2026.</li>
+                    <li>Accepted abstracts will be selected for presentation as <strong>Oral Presentation</strong> or <strong>Poster Presentation</strong>.</li>
+                    <li>Notification of acceptance will be sent to the presenting author via email.</li>
                 </ul>
             </div>
 
-        </div>
-
-        <!-- FORM SUBMISSION SECTION -->
-        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 border-b-2 border-slate-200 pb-3 mb-6">
-            Abstract Submission Form
-        </h2>
-
-        <form id="abstractForm" class="space-y-6">
-            
-            <!-- Step 1: Presenting Author Details -->
-            <div class="border-b pb-6">
-                <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-                    <span class="bg-slate-900 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm">1</span>
-                    Presenting Author Details
-                </h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-sm font-medium mb-1">Full Name (with Academic Titles) *</label>
-                        <input type="text" name="author_name" placeholder="dr. Jane Doe, Sp.PD" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-600 outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-1">Email Address *</label>
-                        <input type="email" name="author_email" placeholder="author@example.com" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-600 outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-1">Institution / Affiliation *</label>
-                        <input type="text" name="institution" placeholder="e.g. Universitas Gadjah Mada" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-600 outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-1">WhatsApp / Phone Number *</label>
-                        <input type="tel" name="phone" placeholder="+62 812..." required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-600 outline-none">
-                    </div>
+            <div class="mb-10 bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-6 shadow-sm">
+                <div class="rounded-xl overflow-hidden shadow border border-slate-300">
+                    <img src="InaTS ilmiah Inggris crop.jpg" alt="Scientific Competition Rules InaTS 2026" class="w-full h-auto">
                 </div>
             </div>
 
-            <!-- Step 2: Submission Details -->
-            <div class="border-b pb-6">
-                <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-                    <span class="bg-slate-900 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm">2</span>
-                    Submission Details
-                </h3>
-                
-                <div class="mb-4">
-                    <label class="block text-sm font-medium mb-1">Abstract Category *</label>
-                    <select name="category" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-600 outline-none bg-white">
-                        <option value="">-- Select Category --</option>
-                        <option value="original_research">Original Research Article</option>
-                        <option value="case_report">Case Report</option>
-                        <option value="systematic_review">Systematic Review / Meta-Analysis</option>
-                    </select>
+            <form id="abstractForm" class="space-y-6 max-w-3xl mx-auto">
+                <div class="border-b pb-6">
+                    <h3 class="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <span class="bg-slate-900 text-white rounded-full w-7 h-7 flex items-center justify-center text-xs">1</span>
+                        Presenting Author Details
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                        <div>
+                            <label class="block font-medium mb-1">Full Name (with Academic Titles) *</label>
+                            <input type="text" name="author_name" placeholder="dr. Jane Doe, Sp.PD" required class="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-600 outline-none">
+                        </div>
+                        <div>
+                            <label class="block font-medium mb-1">Email Address *</label>
+                            <input type="email" name="author_email" placeholder="author@example.com" required class="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-600 outline-none">
+                        </div>
+                        <div>
+                            <label class="block font-medium mb-1">Institution / Affiliation *</label>
+                            <input type="text" name="institution" placeholder="e.g. Universitas Gadjah Mada" required class="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-600 outline-none">
+                        </div>
+                        <div>
+                            <label class="block font-medium mb-1">WhatsApp / Phone Number *</label>
+                            <input type="tel" name="phone" placeholder="+62 812..." required class="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-600 outline-none">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="mb-4">
-                    <label class="block text-sm font-medium mb-1">Abstract Title *</label>
-                    <input type="text" name="title" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-600 outline-none">
+                <div class="border-b pb-6 text-xs sm:text-sm">
+                    <h3 class="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <span class="bg-slate-900 text-white rounded-full w-7 h-7 flex items-center justify-center text-xs">2</span>
+                        Submission Details
+                    </h3>
+                    <div class="mb-4">
+                        <label class="block font-medium mb-1">Abstract Category *</label>
+                        <select name="category" required class="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-600 outline-none bg-white">
+                            <option value="">-- Select Category --</option>
+                            <option value="original_research">Original Research Article</option>
+                            <option value="case_report">Case Report</option>
+                            <option value="systematic_review">Systematic Review / Meta-Analysis</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block font-medium mb-1">Abstract Title *</label>
+                        <input type="text" name="title" required class="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-600 outline-none">
+                    </div>
+                    <div>
+                        <label class="block font-medium mb-1">Authors & Affiliations List *</label>
+                        <textarea name="authors_list" rows="2" placeholder="e.g. Jane Doe1, John Smith2 (1. Dept. of Internal Medicine UGM...)" required class="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-600 outline-none"></textarea>
+                    </div>
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium mb-1">Authors & Affiliations List *</label>
-                    <textarea name="authors_list" rows="2" placeholder="e.g. Jane Doe1, John Smith2 (1. Dept. of Internal Medicine UGM...)" required class="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-600 outline-none"></textarea>
+                    <h3 class="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <span class="bg-slate-900 text-white rounded-full w-7 h-7 flex items-center justify-center text-xs">3</span>
+                        Upload Abstract File
+                    </h3>
+                    <div class="border-2 border-dashed border-slate-300 rounded-2xl p-6 text-center hover:border-blue-500 transition bg-slate-50">
+                        <input type="file" id="abstractFile" name="abstract_file" accept=".doc,.docx,.pdf" required class="hidden" onchange="displayFileName(this)">
+                        <label for="abstractFile" class="cursor-pointer flex flex-col items-center">
+                            <svg class="w-10 h-10 text-slate-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                            <span class="text-sm font-semibold text-blue-600">Click to upload abstract file</span>
+                            <span class="text-xs text-slate-500 mt-1">Accepted Formats: DOC, DOCX, or PDF (Max 10MB)</span>
+                            <span id="fileName" class="mt-4 px-4 py-2 bg-emerald-100 text-emerald-800 font-medium text-xs rounded-xl border border-emerald-300 hidden"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="pt-4">
+                    <button type="submit" id="submitBtn" class="w-full bg-[#9f1830] hover:bg-[#7f1226] text-white font-extrabold py-4 px-6 rounded-2xl shadow-lg hover:shadow-red-900/30 transition text-base">
+                        Submit Abstract
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- REGISTRATION RATES -->
+        <section id="registration" class="inats-section bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-slate-200">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Symposium Registration Fee</h2>
+                <p class="text-slate-600 text-sm mt-1">2 Days Full Access Symposium (20–21 November 2026)</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-center">
+                    <h4 class="font-bold text-slate-800 text-base">Subspecialist Doctor</h4>
+                    <p class="text-3xl font-extrabold text-blue-950 my-3">IDR 2,500,000</p>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-center">
+                    <h4 class="font-bold text-slate-800 text-base">Specialist / PPDS SP2</h4>
+                    <p class="text-3xl font-extrabold text-blue-950 my-3">IDR 2,000,000</p>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-center">
+                    <h4 class="font-bold text-slate-800 text-base">General Practitioner / PPDS SP1</h4>
+                    <p class="text-3xl font-extrabold text-blue-950 my-3">IDR 1,000,000</p>
                 </div>
             </div>
 
-            <!-- Step 3: File Upload -->
-            <div>
-                <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-                    <span class="bg-slate-900 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm">3</span>
-                    Upload Abstract File
-                </h3>
-                <div class="border-2 border-dashed border-slate-300 rounded-xl p-6 text-center hover:border-blue-500 transition bg-slate-50">
-                    <input type="file" id="abstractFile" name="abstract_file" accept=".doc,.docx,.pdf" required class="hidden" onchange="displayFileName(this)">
-                    
-                    <label for="abstractFile" class="cursor-pointer flex flex-col items-center">
-                        <svg class="w-10 h-10 text-slate-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
-                        </svg>
-                        <span class="text-sm font-semibold text-blue-600">Click to upload abstract file</span>
-                        <span class="text-xs text-slate-500 mt-1">Accepted Formats: DOC, DOCX, or PDF (Max 10MB)</span>
-                        <span id="fileName" class="mt-4 px-4 py-2 bg-emerald-100 text-emerald-800 font-medium text-xs rounded-lg border border-emerald-300 hidden"></span>
-                    </label>
+            <div class="mt-8 bg-amber-50 border border-amber-200 rounded-2xl p-5 text-xs sm:text-sm text-amber-900 max-w-2xl mx-auto text-center shadow-sm">
+                <p class="font-bold mb-1">🏦 Bank Transfer Information:</p>
+                <p>Bank Mandiri — <strong>137-00-1429409-0</strong> (a/n KORWIL PERNEFRI YOGYAKARTA)</p>
+            </div>
+        </section>
+<!-- PADEL TOURNAMENT -->
+        <section id="padel" class="bg-gradient-to-r from-emerald-950 to-teal-900 text-white rounded-2xl p-6 sm:p-10 shadow-lg">
+            <div class="max-w-3xl mx-auto text-center">
+                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[10px] font-bold uppercase px-3 py-1 rounded-full">Social Event</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-3">InaTS 2026 Padel Tournament</h2>
+                <p class="text-emerald-100 text-sm mt-2">Sabtu, 21 November 2026 (19.00 – 22.00 WIB) @ Wii Social Hub, Yogyakarta</p>
+            </div>
+        </section>
+
+        <!-- VENUE & CONTACT -->
+        <section id="venue" class="inats-section bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-slate-200">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-2xl font-extrabold text-slate-900 mb-2">Event Venue & Accommodation</h2>
+                    <p class="text-slate-600 text-sm mb-4"><strong>Royal Ambarrukmo Hotel Yogyakarta</strong><br>Jl. Laksda Adisucipto No.81, Yogyakarta, Indonesia</p>
+                    <div class="bg-blue-50 border-l-4 border-blue-600 p-4 text-xs sm:text-sm text-blue-900 rounded-r-xl">
+                        <p class="font-bold">Special Hotel Reservation Rate:</p>
+                        <p>IDR 1,700,000 / night (Deluxe Room via Organizing Committee)</p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 text-xs sm:text-sm space-y-2">
+                    <h4 class="font-bold text-slate-800 text-base mb-2">Secretariat Contacts</h4>
+                    <p>• <strong>dr. Anita, SpPD:</strong> 0853-2046-6624</p>
+                    <p>• <strong>Atri Wijiasih:</strong> 0821-3353-5302</p>
+                    <p>• <strong>Email:</strong> inats2026@gmail.com</p>
                 </div>
             </div>
+        </section>
 
-            <!-- Submit Button -->
-            <div class="pt-4">
-                <button type="submit" id="submitBtn" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg hover:shadow-xl transition duration-200 text-center text-lg">
-                    Submit Abstract
-                </button>
+        <!-- VENUE & HOTEL RESERVATION SECTION (MEMAKAI GAMBAR HOTEL RESERVATION FLYER) -->
+        <section id="accommodation" class="inats-section bg-white rounded-2xl p-6 sm:p-10 shadow-md border border-slate-200">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Venue & Accommodations</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-1">Royal Ambarrukmo Hotel Yogyakarta</h2>
+                <p class="text-slate-600 text-sm mt-2">Jl. Laksda Adisucipto No.81, Ambarrukmo, Caturtunggal, Depok, Sleman, DIY</p>
             </div>
 
-        </form>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                
+                <!-- Gambar Flyer Hotel Reservation -->
+                <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
+                    <img src="Hotel_Reservation.png" alt="Hotel Reservation Royal Ambarrukmo" class="w-full h-auto">
+                </div>
+
+                <!-- Detail Reservasi & Kontak -->
+                <div class="space-y-6">
+                    <div class="bg-blue-50 border-l-4 border-blue-600 p-5 rounded-r-2xl">
+                        <h3 class="font-extrabold text-blue-950 text-lg">Special Rate via Organizing Committee</h3>
+                        <p class="text-3xl font-black text-blue-900 my-2">IDR 1,700,000 <span class="text-xs font-normal text-slate-600">/ night (Deluxe Room)</span></p>
+                        <p class="text-xs text-blue-800">Stay Period: <strong>20 – 21 November 2026</strong></p>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3 text-sm">
+                        <h4 class="font-bold text-slate-900 text-base mb-2">For Reservation & Information:</h4>
+                        
+                        <div class="flex items-center gap-3">
+                            <span class="bg-emerald-100 text-emerald-800 p-2 rounded-xl text-lg">📱</span>
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium">Hotel Reservation CP</p>
+                                <p class="font-bold text-slate-900">Ratna: 0812-2720-6602</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-100 text-blue-800 p-2 rounded-xl text-lg">✉️</span>
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium">Official Secretariat Email</p>
+                                <p class="font-bold text-slate-900">inats2026@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 pt-2 border-t border-slate-200">
+                            <span class="bg-amber-100 text-amber-900 p-2 rounded-xl text-lg">📞</span>
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium">Symposium Registration CP</p>
+                                <p class="font-bold text-slate-900">dr. Anita, SpPD: 0853-2046-6624</p>
+                                <p class="font-bold text-slate-900">Atri Wijiasih: 0821-3353-5302</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-100 text-center text-xs text-slate-500 py-6 border-t border-slate-200">
-        <p class="font-semibold text-slate-700">InaTS 2026 Secretariat</p>
-        <p class="mt-1">Contact: Atri Wijiasih (0821-3353-5302) | dr. Anita SpPD (0853-2046-6624)</p>
-        <p class="mt-1">Email: inats2026@gmail.com | Website: www.inats2026.org</p>
+    <footer class="bg-slate-950 text-white text-center text-xs py-8 border-t border-slate-800">
+        <p class="font-semibold text-slate-300">10th Annual Meeting of Indonesian Transplantation Society (InaTS 2026)</p>
+        <p class="text-slate-500 mt-1">Yogyakarta, Indonesia | 20–21 November 2026</p>
     </footer>
 
-    <!-- Script Integrasi & Pemanggil Nama File -->
+    <!-- SCRIPT -->
     <script>
         const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxx-CO6Rk44yRX4KgM9-WzmegjwyL7KBKeN-bPotE6Y55lugu6V9_vrl5MwCkwBC4rUCA/exec";
 
-       
-        // 1. FUNGSI PENAMPIL NAMA FILE TERPILIH
+        // COUNTDOWN SYMPOSIUM
+        function startEventCountdown() {
+            const eventTarget = new Date("November 20, 2026 08:00:00 GMT+0700").getTime();
+            setInterval(function() {
+                const now = new Date().getTime();
+                const dist = eventTarget - now;
+                if (dist > 0) {
+                    document.getElementById("ev-days").innerText = Math.floor(dist / (1000 * 60 * 60 * 24));
+                    document.getElementById("ev-hours").innerText = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    document.getElementById("ev-mins").innerText = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+                    document.getElementById("ev-secs").innerText = Math.floor((dist % (1000 * 60)) / 1000);
+                }
+            }, 1000);
+        }
+
+        // COUNTDOWN DEADLINE
+        function startCountdown() {
+            const targetDate = new Date("October 17, 2026 23:59:59 GMT+0700").getTime();
+
+            const timerInterval = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                if (distance <= 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById("countdownBox").classList.add("hidden");
+                    document.getElementById("closedMessage").classList.remove("hidden");
+                    
+                    const submitBtn = document.getElementById("submitBtn");
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.innerText = "Submission Closed";
+                        submitBtn.classList.replace("bg-[#9f1830]", "bg-gray-500");
+                    }
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("cd-days").innerText = days < 10 ? "0" + days : days;
+                document.getElementById("cd-hours").innerText = hours < 10 ? "0" + hours : hours;
+                document.getElementById("cd-minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+                document.getElementById("cd-seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+            }, 1000);
+        }
+
+        startEventCountdown();
+        startCountdown();
+
+        // DISPLAY FILE NAME
         function displayFileName(input) {
-            const fileNameContainer = document.getElementById('fileName');
+            const container = document.getElementById('fileName');
             if (input.files && input.files[0]) {
-                const fileSizeMB = (input.files[0].size / (1024 * 1024)).toFixed(2);
-                fileNameContainer.innerText = "📄 Selected File: " + input.files[0].name + " (" + fileSizeMB + " MB)";
-                fileNameContainer.classList.remove('hidden');
-            } else {
-                fileNameContainer.classList.add('hidden');
+                const size = (input.files[0].size / (1024 * 1024)).toFixed(2);
+                container.innerText = "📄 Selected: " + input.files[0].name + " (" + size + " MB)";
+                container.classList.remove('hidden');
             }
         }
 
-        // 2. FUNGSI PENGIRIMAN DATA KE GOOGLE DRIVE
+        // FORM SUBMISSION
         document.getElementById('abstractForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const submitBtn = document.getElementById('submitBtn');
-            const fileInput = document.getElementById('abstractFile');
-            const file = fileInput.files[0];
-
-            if (!file) {
-                alert("Harap pilih file abstrak terlebih dahulu!");
-                return;
-            }
+            const file = document.getElementById('abstractFile').files[0];
+            if (!file) return alert("Harap pilih file abstrak terlebih dahulu!");
 
             submitBtn.innerText = "Mengirim data & mengunggah berkas...";
             submitBtn.disabled = true;
@@ -272,7 +718,6 @@
             const reader = new FileReader();
             reader.onload = function(evt) {
                 const base64Data = evt.target.result.split(',')[1];
-                
                 const formData = new FormData();
                 formData.append('author_name', document.getElementsByName('author_name')[0].value);
                 formData.append('author_email', document.getElementsByName('author_email')[0].value);
@@ -285,70 +730,25 @@
                 formData.append('file_name', file.name);
                 formData.append('file_type', file.type);
 
-                fetch(SCRIPT_URL, {
-                    method: 'POST',
-                    body: new URLSearchParams(formData)
-                })
+                fetch(SCRIPT_URL, { method: 'POST', body: new URLSearchParams(formData) })
                 .then(res => res.json())
-                .then(response => {
-                    if (response.result === 'success') {
+                .then(res => {
+                    if (res.result === 'success') {
                         alert("Abstrak berhasil terkirim! Terima kasih telah mendaftar di InaTS 2026.");
                         document.getElementById('abstractForm').reset();
                         document.getElementById('fileName').classList.add('hidden');
                     } else {
-                        alert("Gagal mengirim data: " + response.error);
+                        alert("Gagal mengirim data: " + res.error);
                     }
                 })
-                .catch(err => {
-                    alert("Terjadi kesalahan koneksi. Silakan coba lagi.");
-                    console.error(err);
-                })
+                .catch(err => alert("Terjadi kesalahan koneksi. Silakan coba lagi."))
                 .finally(() => {
                     submitBtn.innerText = "Submit Abstract";
                     submitBtn.disabled = false;
                 });
             };
-
             reader.readAsDataURL(file);
         });
-         // 3. FUNGSI COUNTDOWN TIMER SAMPAI 17 OKTOBER 2026 JAM 23.59 WIB
-function startCountdown() {
-    // Target Waktu: 17 Oktober 2026 23:59:59 WIB (UTC+7)
-    const targetDate = new Date("October 17, 2026 23:59:59 GMT+0700").getTime();
-
-    const timerInterval = setInterval(function() {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
-
-        if (distance <= 0) {
-            clearInterval(timerInterval);
-            document.getElementById("countdownBox").classList.add("hidden");
-            document.getElementById("closedMessage").classList.remove("hidden");
-            
-            // Opsional: Matikan tombol submit jika deadline sudah lewat
-            const submitBtn = document.getElementById("submitBtn");
-            if (submitBtn) {
-                submitBtn.disabled = true;
-                submitBtn.innerText = "Submission Closed";
-                submitBtn.classList.replace("bg-red-600", "bg-gray-500");
-            }
-            return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("cd-days").innerText = days < 10 ? "0" + days : days;
-        document.getElementById("cd-hours").innerText = hours < 10 ? "0" + hours : hours;
-        document.getElementById("cd-minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
-        document.getElementById("cd-seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
-    }, 1000);
-}
-
-// Jalankan countdown saat halaman dimuat
-startCountdown();
     </script>
 </body>
 </html>
