@@ -3,130 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10th Annual Meeting of InaTS 2026 - Official Website</title>
+    <title>10th Annual Meeting of InaTS 2026 - Final Announcement</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --inats-navy: #071b3a;
-            --inats-blue: #0b4f9c;
-            --inats-blue-2: #0f6bc5;
-            --inats-red: #c6283f;
-            --inats-red-dark: #9f1830;
-            --inats-gold: #d7a83d;
-            --inats-cream: #f7f5ef;
-            --inats-ink: #172033;
-        }
-
-        html { scroll-padding-top: 80px; }
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--inats-ink);
-            background:
-                radial-gradient(circle at 10% 0%, rgba(11,79,156,.08), transparent 30%),
-                radial-gradient(circle at 90% 10%, rgba(198,40,63,.07), transparent 28%),
-                linear-gradient(180deg, #f8fafc 0%, #eef4f9 48%, #f8fafc 100%);
-        }
-
-        /* InaTS visual language: navy + clinical blue + red accent + restrained gold */
+        body { font-family: 'Inter', sans-serif; }
+        
         .bg-inats-pattern {
-            background:
-                radial-gradient(circle at 1px 1px, rgba(11,79,156,.10) 1px, transparent 0) 0 0 / 26px 26px,
-                linear-gradient(180deg, #f8fafc 0%, #eef4f9 100%);
+            background-color: #f4f8fc;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 24px 24px;
         }
 
         .hero-banner-bg {
-            background:
-                linear-gradient(135deg, rgba(7,27,58,.94) 0%, rgba(7,27,58,.78) 48%, rgba(159,24,48,.78) 100%),
-                url('bg.png');
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.85)), url('bg.png');
             background-size: cover;
             background-position: center top;
             background-repeat: no-repeat;
         }
 
         .bg-inats-card {
-            background: rgba(255,255,255,.94);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-        }
-
-        .inats-section {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .inats-section::before {
-            content: "";
-            position: absolute;
-            width: 180px;
-            height: 180px;
-            right: -70px;
-            top: -70px;
-            border-radius: 999px;
-            background: rgba(11,79,156,.05);
-            pointer-events: none;
-        }
-
-        .inats-accent-line {
-            height: 4px;
-            width: 72px;
-            margin: 0 auto 14px;
-            border-radius: 999px;
-            background: linear-gradient(90deg, var(--inats-blue), var(--inats-red));
-        }
-
-        .inats-gradient-text {
-            background: linear-gradient(90deg, #e8c76b 0%, #fff8d9 45%, #d7a83d 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .inats-red-gradient {
-            background: linear-gradient(135deg, var(--inats-red-dark), var(--inats-red));
-        }
-
-        .inats-blue-gradient {
-            background: linear-gradient(135deg, var(--inats-navy), var(--inats-blue));
-        }
-
-        .nav-link {
-            position: relative;
-            transition: color .2s ease;
-        }
-
-        .nav-link::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: -7px;
-            height: 2px;
-            border-radius: 99px;
-            background: var(--inats-gold);
-            transform: scaleX(0);
-            transform-origin: center;
-            transition: transform .2s ease;
-        }
-
-        .nav-link:hover::after,
-        .nav-link:focus-visible::after { transform: scaleX(1); }
-
-        input:focus, select:focus, textarea:focus {
-            border-color: var(--inats-blue);
-            box-shadow: 0 0 0 3px rgba(11,79,156,.12);
-        }
-
-        @media (max-width: 640px) {
-            .hero-banner-bg { background-position: 58% top; }
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
         }
     </style>
 </head>
-<body class="bg-inats-pattern text-slate-800 antialiased selection:bg-red-600 selection:text-white">
+<body class="bg-inats-pattern text-slate-800 antialiased selection:bg-amber-500 selection:text-slate-900">
 
     <!-- TOP OFFICIAL LOGO BAR -->
     <div class="bg-white/95 backdrop-blur border-b border-slate-200 py-3 px-4 sm:px-8 shadow-sm">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            
             <div class="flex items-center gap-3">
                 <img src="InaTS_logo.jpg" alt="InaTS Logo" class="h-12 w-auto object-contain">
                 <div class="hidden sm:block border-l border-slate-300 pl-3">
@@ -134,39 +42,41 @@
                     <p class="text-[11px] font-medium text-blue-700">Perhimpunan Transplantasi Indonesia</p>
                 </div>
             </div>
+
             <div class="flex items-center gap-4 sm:gap-6">
                 <div class="text-[11px] text-slate-500 font-medium hidden md:block">Co-hosted & Supported by:</div>
                 <img src="Kemenkes_logo.jpg" alt="Kemenkes RI" class="h-9 sm:h-10 w-auto object-contain">
                 <img src="IDI_logo.png" alt="IDI" class="h-8 sm:h-9 w-auto object-contain">
                 <img src="UGM_logo.png" alt="Universitas Gadjah Mada" class="h-10 sm:h-11 w-auto object-contain">
             </div>
+
         </div>
     </div>
 
     <!-- STICKY NAVBAR -->
-    <nav class="sticky top-0 z-50 bg-[#071b3a]/95 backdrop-blur-md text-white border-b-2 border-[#d7a83d] shadow-xl">
+    <nav class="sticky top-0 z-50 bg-blue-950/95 backdrop-blur-md text-white border-b-2 border-amber-500 shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <a href="#home" class="flex items-center gap-2 text-[#e5c15d] font-black text-lg sm:text-xl tracking-wider">
+                <a href="#home" class="flex items-center gap-2 text-amber-400 font-black text-lg sm:text-xl tracking-wider">
                     <span>InaTS 2026</span>
                 </a>
                 <div class="hidden lg:flex items-center space-x-6 text-xs sm:text-sm font-medium">
-                    <a href="#home" class="nav-link hover:text-[#e5c15d]">Home</a>
-                    <a href="#about" class="nav-link hover:text-[#e5c15d]">About</a>
-                    <a href="#program" class="nav-link hover:text-[#e5c15d]">Scientific Agenda</a>
-                    <a href="#awards" class="nav-link hover:text-[#e5c15d]">FIIR Awards</a>
-                    <a href="#target-participants" class="nav-link hover:text-[#e5c15d]">Target Participants</a>
-                    <a href="#abstract" class="nav-link hover:text-[#e5c15d]">Abstracts</a>
-                    <a href="#registration" class="nav-link hover:text-[#e5c15d]">Registration</a>
-                    <a href="#padel" class="nav-link hover:text-[#e5c15d]">Padel</a>
-                    <a href="#venue" class="nav-link hover:text-[#e5c15d]">Venue</a>
+                    <a href="#home" class="hover:text-amber-400 transition">Home</a>
+                    <a href="#about" class="hover:text-amber-400 transition">About</a>
+                    <a href="#target-participants" class="hover:text-amber-400 transition">Target Participants</a>
+                    <a href="#program" class="hover:text-amber-400 transition">Scientific Agenda</a>
+                    <a href="#awards" class="hover:text-amber-400 transition">FIIR Awards</a>
+                    <a href="#abstract" class="hover:text-amber-400 transition">Abstract Submission</a>
+                    <a href="#InaTS_Padel_Tournament_2026" class="hover:text-amber-400 transition">Padel Tournament</a>
+                    <a href="#registration" class="hover:text-amber-400 transition">Registration</a>
+                    <a href="#Hotel_Reservation" class="hover:text-amber-400 transition">Venue & Hotel</a>
                 </div>
                 <div class="flex items-center gap-3">
-                    <a href="2nd_Announcement_InaTS2026.pdf" download class="border border-[#d7a83d] text-[#f0d27a] hover:bg-[#d7a83d] hover:text-[#071b3a] font-bold text-xs sm:text-sm px-3.5 py-2 rounded-xl transition flex items-center gap-1.5">
+                    <a href="2nd_Announcement_InaTS2026.pdf" download class="border border-amber-400 text-amber-300 hover:bg-amber-400 hover:text-slate-950 font-bold text-xs sm:text-sm px-3.5 py-2 rounded-xl transition flex items-center gap-1.5">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                        <span>2nd Announcement</span>
+                        <span>Final Announcement</span>
                     </a>
-                    <a href="https://ugm.id/inatsreg" target="_blank" class="bg-gradient-to-r from-[#9f1830] to-[#d7a83d] hover:from-[#86142a] hover:to-[#c2932f] text-white font-extrabold text-xs sm:text-sm px-4 py-2 rounded-xl shadow-md transition transform hover:scale-105 inline-block">
+                    <a href="https://ugm.id/inatsreg" target="_blank" class="bg-gradient-to-r from-red-600 to-amber-500 hover:from-red-700 hover:to-amber-600 text-white font-extrabold text-xs sm:text-sm px-4 py-2 rounded-xl shadow-md transition transform hover:scale-105 inline-block">
                         Register ↗
                     </a>
                 </div>
@@ -175,17 +85,20 @@
     </nav>
 
     <!-- HERO HEADER -->
-    <header id="home" class="relative hero-banner-bg text-white py-20 lg:py-32 px-4 sm:px-8 border-b-4 border-[#d7a83d] shadow-2xl">
+    <header id="home" class="relative hero-banner-bg text-white py-20 lg:py-32 px-4 sm:px-8 border-b-4 border-amber-500 shadow-2xl">
         <div class="max-w-5xl mx-auto text-center relative z-10">
+            
             <div class="inline-flex items-center gap-2 bg-blue-950/80 border border-amber-400/60 text-amber-300 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full mb-6 backdrop-blur-md shadow-lg">
                 <span>📍 Royal Ambarrukmo Hotel, Yogyakarta</span>
                 <span>•</span>
                 <span>📅 20–21 November 2026</span>
             </div>
+            
             <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight drop-shadow-xl">
                 10<sup>th</sup> ANNUAL MEETING OF<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#e8c76b] via-[#fff8d9] to-[#d7a83d]">INDONESIAN TRANSPLANTATION SOCIETY</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-100 to-amber-400">INDONESIAN TRANSPLANTATION SOCIETY</span>
             </h1>
+            
             <p class="text-blue-100 mt-4 text-base sm:text-xl font-medium italic max-w-3xl mx-auto drop-shadow-md">
                 "Beyond Limits: Advancing Transplantation in Indonesia — Bridging Science, Surgery, and Sustainability"
             </p>
@@ -222,36 +135,35 @@
                 </a>
                 <a href="2nd_Announcement_InaTS2026.pdf" download class="bg-blue-950/80 hover:bg-blue-900 text-amber-300 border border-amber-400/60 font-bold text-sm sm:text-base px-7 py-3.5 rounded-xl shadow-lg transition flex items-center gap-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                    Download 2nd Announcement
+                    Download Final Announcement
                 </a>
             </div>
         </div>
     </header>
 
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
 
-
-        <!-- ABOUT & HIGHLIGHTS -->
-        <section id="about" class="inats-section bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-slate-200">
+        <!-- ABOUT -->
+        <section id="about" class="bg-inats-card rounded-2xl p-6 sm:p-10 shadow-md border border-blue-100">
             <div class="max-w-3xl mx-auto text-center mb-8">
-                <div class="inats-accent-line"></div>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Why Attend InaTS 2026?</h2>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-blue-950">Why Attend InaTS 2026?</h2>
                 <p class="text-slate-600 mt-2 text-sm sm:text-base">Comprehensive discussions on kidney, liver, cornea, and bone marrow transplantation with national & international experts.</p>
             </div>
 
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-                <div class="bg-blue-50 border border-blue-100 p-5 rounded-2xl shadow-sm">
+                <div class="bg-blue-50 border border-blue-200 p-5 rounded-2xl shadow-sm">
                     <span class="text-3xl mb-2 block">🌐</span>
                     <h4 class="font-bold text-blue-900 text-sm">World-Class Program</h4>
                 </div>
-                <div class="bg-amber-50 border border-amber-100 p-5 rounded-2xl shadow-sm">
+                <div class="bg-amber-50 border border-amber-200 p-5 rounded-2xl shadow-sm">
                     <span class="text-3xl mb-2 block">👨‍⚕️</span>
                     <h4 class="font-bold text-amber-900 text-sm">Top Experts</h4>
                 </div>
-                <div class="bg-emerald-50 border border-emerald-100 p-5 rounded-2xl shadow-sm">
+                <div class="bg-emerald-50 border border-emerald-200 p-5 rounded-2xl shadow-sm">
                     <span class="text-3xl mb-2 block">🤝</span>
                     <h4 class="font-bold text-emerald-900 text-sm">Networking</h4>
                 </div>
-                <div class="bg-purple-50 border border-purple-100 p-5 rounded-2xl shadow-sm">
+                <div class="bg-purple-50 border border-purple-200 p-5 rounded-2xl shadow-sm">
                     <span class="text-3xl mb-2 block">🏆</span>
                     <h4 class="font-bold text-purple-900 text-sm">Scientific Awards</h4>
                 </div>
@@ -259,43 +171,57 @@
         </section>
 
         <!-- TARGET PARTICIPANTS -->
-        <section id="target-participants" class="inats-section bg-white rounded-2xl p-6 sm:p-10 shadow-md border border-slate-200">
+        <section id="target-participants" class="bg-inats-card rounded-2xl p-6 sm:p-10 shadow-md border border-blue-100">
             <div class="text-center max-w-3xl mx-auto mb-8">
-                <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Who Should Attend?</span>
-                <div class="inats-accent-line"></div>
-                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-1">Target Participants</h2>
-                <p class="text-slate-600 text-sm sm:text-base mt-3">InaTS 2026 welcomes professionals, trainees, researchers, policy makers, and students across the transplantation community.</p>
+                <span class="text-blue-700 font-bold text-xs uppercase tracking-widest">Who Should Attend?</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-blue-950 mt-1">Target Participants</h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-2">InaTS 2026 welcomes professionals, trainees, researchers, policy makers, and students across the transplantation community.</p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
                 <div class="lg:col-span-2 rounded-2xl overflow-hidden border border-blue-100 shadow-sm bg-blue-50">
                     <img src="InaTS_Target_Participants_2026.png" alt="InaTS 2026 target participants poster" class="w-full h-auto" loading="lazy">
                 </div>
                 <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div class="rounded-2xl bg-blue-50 p-5 border border-blue-100">
+                    <div class="rounded-2xl bg-blue-50/80 p-5 border border-blue-100">
                         <h3 class="font-extrabold text-blue-950 mb-3">Clinical Specialists</h3>
                         <ul class="space-y-2 text-sm text-slate-700 list-disc pl-5">
-                            <li>Nephrologists</li><li>Hepatologists / Gastroenterohepatologists</li><li>Pediatricians</li><li>Urologists</li><li>Ophthalmologists</li><li>Anesthesiologists</li><li>Clinical Pathologists</li><li>Hematologist-Oncologists</li><li>Intensive Care Specialists</li><li>Infectious Disease Specialists</li><li>Immunologists / Allergy-Immunology Specialists</li>
+                            <li>Nephrologists</li>
+                            <li>Hepatologists / Gastroenterohepatologists</li>
+                            <li>Pediatricians</li>
+                            <li>Urologists</li>
+                            <li>Ophthalmologists</li>
+                            <li>Anesthesiologists</li>
+                            <li>Clinical Pathologists</li>
+                            <li>Hematologist-Oncologists</li>
+                            <li>Intensive Care Specialists</li>
+                            <li>Infectious Disease Specialists</li>
+                            <li>Immunologists / Allergy-Immunology Specialists</li>
                         </ul>
                     </div>
-                    <div class="rounded-2xl bg-red-50 p-5 border border-red-100">
+                    <div class="rounded-2xl bg-red-50/80 p-5 border border-red-100">
                         <h3 class="font-extrabold text-red-900 mb-3">Other Professionals & Future Leaders</h3>
                         <ul class="space-y-2 text-sm text-slate-700 list-disc pl-5">
-                            <li>Residents and Fellows</li><li>Pharmacists and Clinical Pharmacologists</li><li>Organ Donation and Transplantation Policy Makers / Government Representatives</li><li>General Practitioners</li><li>Researchers and Academicians in Transplantation and Precision Medicine</li><li>Medical Students and Healthcare Students</li>
+                            <li>Residents and Fellows</li>
+                            <li>Pharmacists and Clinical Pharmacologists</li>
+                            <li>Organ Donation and Transplantation Policy Makers / Government Representatives</li>
+                            <li>General Practitioners</li>
+                            <li>Researchers and Academicians in Transplantation and Precision Medicine</li>
+                            <li>Medical Students and Healthcare Students</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SCIENTIFIC AGENDA (DAY 1 & DAY 2) -->
+        <!-- SCIENTIFIC AGENDA & COMPLETE FINAL RUNDOWN -->
         <section id="program" class="bg-inats-card rounded-2xl p-6 sm:p-10 shadow-md border border-blue-100">
             <div class="text-center max-w-3xl mx-auto mb-10">
-                <span class="text-blue-700 font-bold text-xs uppercase tracking-widest">Symposium Program Details</span>
-                <h2 class="text-2xl sm:text-4xl font-extrabold text-blue-950 mt-1">Scientific Agenda</h2>
+                <span class="text-blue-700 font-bold text-xs uppercase tracking-widest">Full Scientific Schedule</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-blue-950 mt-1">Final Scientific Rundown</h2>
                 <p class="text-slate-600 text-sm mt-2">Royal Ambarrukmo Hotel, Yogyakarta | 20–21 November 2026</p>
             </div>
 
-            <!-- DAY 1 AGENDA -->
+            <!-- DAY 1 RUNDOWN -->
             <div class="mb-12 border border-blue-200 rounded-2xl overflow-hidden shadow-sm">
                 <div class="bg-blue-900 text-white p-4 sm:p-6 flex flex-wrap justify-between items-center gap-2">
                     <div>
@@ -306,70 +232,154 @@
                 </div>
 
                 <div class="divide-y divide-blue-50 p-4 sm:p-6 space-y-6 text-sm bg-white">
-                    <div class="bg-slate-100/80 p-4 rounded-xl border-l-4 border-blue-900">
-                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Opening Ceremony</span>
-                        <p class="text-slate-700 text-sm mt-1">Opening Remarks by the Chair of InaTS and Chair of the Committee</p>
+                    
+                    <!-- 07:00 - 08:00 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-center bg-slate-50 p-3 rounded-xl">
+                        <span class="bg-slate-200 text-slate-800 font-black text-xs px-3 py-1 rounded-lg whitespace-nowrap min-w-[120px] text-center">07:00 - 08:00</span>
+                        <span class="font-bold text-slate-700 text-xs uppercase tracking-wider">Participant Registration</span>
                     </div>
 
-                    <div class="bg-amber-50/50 p-4 rounded-xl border-l-4 border-amber-500">
-                        <span class="font-bold text-amber-800 text-xs uppercase tracking-wider block">Plenary Lecture 1</span>
-                        <h4 class="font-extrabold text-slate-900 text-base mt-1">From Policy to Practice: Assessing Government Readiness for Deceased Donor Programs and the National Transplant Registry in Indonesia</h4>
-                    </div>
-
-                    <div class="pt-4">
-                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Simposium 1</span>
-                        <h4 class="font-bold text-slate-900 text-base mb-2">Dead Donor Protocol in Practice: Bridging Critical Care and Transplantation in Indonesia</h4>
-                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
-                            <li>Brain Death Declaration and Donor Optimization: What Every Intensivist Must Know Before the Transplant Team Arrives</li>
-                            <li>Keeping the Organs Alive: Anesthetic and Hemodynamic Management of the Brain-Dead Donor for Optimal Organ Procurement</li>
-                            <li class="italic text-slate-500">Discussion & Q&A</li>
-                        </ul>
-                    </div>
-
-                    <div class="pt-4">
-                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Simposium 2</span>
-                        <h4 class="font-bold text-slate-900 text-base mb-2">The Perfect Partnership: Optimizing Tacrolimus and Mycophenolate as the Cornerstone of Kidney Transplant Immunosuppression</h4>
-                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
-                            <li>Getting Tacrolimus Right from Day One: Initiation, Target Trough, and Early Post-Transplant Pitfalls</li>
-                            <li>Making the Partnership Work: Practical Mycophenolate Dosing, Drug Interactions, and Monitoring in Tacrolimus-Based Regimens</li>
-                            <li class="italic text-slate-500">Discussion & Q&A</li>
-                        </ul>
-                    </div>
-
-                    <div class="pt-4">
-                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Simposium 3</span>
-                        <h4 class="font-bold text-slate-900 text-base mb-2">Guarding the Graft from Within: Tackling the Most Common Viral and Bacterial Infections After Kidney Transplantation</h4>
-                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
-                            <li>The CMV Dilemma in Kidney Transplant Recipients: When to Prevent, When to Treat, and How Long to Use Valganciclovir</li>
-                            <li>Common Yet Underestimated: Urinary Tract Infection and Graft Pyelonephritis in Kidney Transplant Recipients</li>
-                            <li class="italic text-slate-500">Discussion & Q&A</li>
-                        </ul>
-                    </div>
-
-                    <div class="pt-4">
-                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Simposium 4</span>
-                        <h4 class="font-bold text-slate-900 text-base mb-2">The Art of Modern Kidney Transplant Surgery: From Scarless Donor Nephrectomy to Optimal Recipient Implantation</h4>
-                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
-                            <li>No Scar, No Compromise: Transvaginal Natural Orifice Specimen Extraction (NOSE) and Laparoscopic Donor Nephrectomy — Technique, Safety, and Donor Experience</li>
-                            <li>The Recipient Side of Success: Surgical Technique, Anatomical Considerations, and Technical Pitfalls in Kidney Transplantation</li>
-                            <li class="italic text-slate-500">Discussion & Q&A</li>
-                        </ul>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
-                        <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl">
-                            <span class="font-extrabold text-blue-900 text-sm block">Oral Presentation Session</span>
-                            <p class="text-xs text-slate-600 mt-1">15 presenters (10 minutes each)</p>
-                        </div>
-                        <div class="bg-amber-50 border border-amber-200 p-4 rounded-xl">
-                            <span class="font-extrabold text-amber-900 text-sm block">Poster Exhibition</span>
-                            <p class="text-xs text-slate-600 mt-1">From 14:00 onward</p>
+                    <!-- 08:00 - 08:30 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-start pt-4">
+                        <span class="bg-blue-100 text-blue-900 font-black text-xs px-3 py-1.5 rounded-lg whitespace-nowrap min-w-[120px] text-center">08:00 - 08:30</span>
+                        <div class="w-full">
+                            <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Opening Ceremony</span>
+                            <h4 class="font-extrabold text-slate-900 text-base mt-1">Opening Remarks by the InaTS Chair and the Organizing Committee Chair</h4>
+                            <ul class="list-disc list-inside text-slate-700 space-y-1.5 mt-2 pl-2">
+                                <li><strong>Organizing Committee Chair's Report:</strong> Dr. dr. Metalia Puspitasari, M.Sc., Sp.PD, Subsp. G.H. (K), FINASIM</li>
+                                <li><strong>Welcome Address & Official Opening:</strong> Dr. dr. Maruhum Bonar H. Marbun, Sp.PD-KGH, FINASIM (InaTS Chair)</li>
+                            </ul>
                         </div>
                     </div>
+
+                    <!-- 08:30 - 09:00 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-start pt-4">
+                        <span class="bg-amber-100 text-amber-900 font-black text-xs px-3 py-1.5 rounded-lg whitespace-nowrap min-w-[120px] text-center">08:30 - 09:00</span>
+                        <div class="w-full bg-amber-50/60 p-4 rounded-xl border-l-4 border-amber-500">
+                            <span class="font-bold text-amber-800 text-xs uppercase tracking-wider block">Plenary Lecture 1</span>
+                            <h4 class="font-extrabold text-slate-900 text-base mt-1">"From Policy to Practice: Assessing Government Readiness for Deceased Donor Programs and the National Transplant Registry in Indonesia"</h4>
+                            <p class="text-xs text-slate-600 mt-2"><strong>Moderator:</strong> dr. Heru Prasanto, Sp.PD-KGH</p>
+                            <p class="text-xs text-amber-900 font-bold mt-1"><strong>Speaker:</strong> dr. Azhar Jaya, S.H., SKM., MARS (Director General, Ministry of Health of the Republic of Indonesia)</p>
+                        </div>
+                    </div>
+
+                    <!-- 09:00 - 09:50 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-start pt-4">
+                        <span class="bg-blue-100 text-blue-900 font-black text-xs px-3 py-1.5 rounded-lg whitespace-nowrap min-w-[120px] text-center">09:00 - 09:50</span>
+                        <div class="w-full">
+                            <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Symposium 1</span>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">"Dead Donor Protocol in Practice: Bridging Critical Care and Transplantation in Indonesia"</h4>
+                            <p class="text-xs text-slate-500 mb-3"><strong>Moderator:</strong> dr. Calcarina Fitriani Retno Wisudarti, Sp.An-KIC</p>
+                            
+                            <div class="space-y-2 text-xs sm:text-sm text-slate-700 pl-2 border-l-2 border-blue-100">
+                                <div>
+                                    <span class="font-bold text-blue-950">09:00 - 09:20 | Speaker 1:</span> dr. Aries Perdana, Sp.An-TI, Subsp.An.KV(K)
+                                    <p class="italic text-slate-600">"Brain Death Declaration and Donor Optimization: What Every Intensivist Must Know Before the Transplant Team Arrives"</p>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-blue-950">09:20 - 09:40 | Speaker 2:</span> dr. Adhrie Sugiarto, Sp.An-TI, Subsp.TI(K)
+                                    <p class="italic text-slate-600">"Keeping the Organs Alive: Anesthetic and Hemodynamic Management of the Brain-Dead Donor for Optimal Organ Procurement"</p>
+                                </div>
+                                <p class="text-slate-500 font-semibold pt-1">09:40 - 09:50 | Discussion & Q&A</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 09:50 - 10:40 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-start pt-4">
+                        <span class="bg-blue-100 text-blue-900 font-black text-xs px-3 py-1.5 rounded-lg whitespace-nowrap min-w-[120px] text-center">09:50 - 10:40</span>
+                        <div class="w-full">
+                            <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Symposium 2</span>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">"The Perfect Partnership: Optimizing Tacrolimus and Mycophenolate as the Cornerstone of Kidney Transplant Immunosuppression"</h4>
+                            <p class="text-xs text-slate-500 mb-3"><strong>Moderator:</strong> dr. Retno Palupi, B.Med.Sc, M.Epid, M.Sc, Sp.A(K), Subsp.Nefro</p>
+                            
+                            <div class="space-y-2 text-xs sm:text-sm text-slate-700 pl-2 border-l-2 border-blue-100">
+                                <div>
+                                    <span class="font-bold text-blue-950">09:50 - 10:10 | Speaker 1:</span> Dr. dr. Harnavi Harun, Sp.PD-KGH, FINASIM
+                                    <p class="italic text-slate-600">"Getting Tacrolimus Right from Day One: Initiation, Target Trough, and Early Post-Transplant Pitfalls"</p>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-blue-950">10:10 - 10:30 | Speaker 2:</span> Dr. dr. Lestariningsih, Sp.PD-KGH, FINASIM
+                                    <p class="italic text-slate-600">"Making the Partnership Work: Practical Mycophenolate Dosing, Drug Interactions, and Monitoring in Tacrolimus-Based Regimens"</p>
+                                </div>
+                                <p class="text-slate-500 font-semibold pt-1">10:30 - 10:40 | Discussion & Q&A</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10:40 - 11:30 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-start pt-4">
+                        <span class="bg-blue-100 text-blue-900 font-black text-xs px-3 py-1.5 rounded-lg whitespace-nowrap min-w-[120px] text-center">10:40 - 11:30</span>
+                        <div class="w-full">
+                            <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Symposium 3</span>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">"Guarding the Graft from Within: Tackling the Most Common Viral and Bacterial Infections After Kidney Transplantation"</h4>
+                            <p class="text-xs text-slate-500 mb-3"><strong>Moderator:</strong> dr. Afif Rahman, Sp.Rad, Subsp.RI(K)</p>
+                            
+                            <div class="space-y-2 text-xs sm:text-sm text-slate-700 pl-2 border-l-2 border-blue-100">
+                                <div>
+                                    <span class="font-bold text-blue-950">10:40 - 11:00 | Speaker 1:</span> dr. Robert Sinto, Sp.PD-KPTI
+                                    <p class="italic text-slate-600">"The CMV Dilemma in Kidney Transplant Recipients: When to Prevent, When to Treat, and How Long to Use Valganciclovir"</p>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-blue-950">11:00 - 11:20 | Speaker 2:</span> Dr. dr. Doni Priambodo Wijiaksono, Sp.PD, Subsp.PTI(K)
+                                    <p class="italic text-slate-600">"Common Yet Underestimated: Urinary Tract Infection and Graft Pyelonephritis in Kidney Transplant Recipients"</p>
+                                </div>
+                                <p class="text-slate-500 font-semibold pt-1">11:20 - 11:30 | Discussion & Q&A</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 11:30 - 13:00 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-center pt-4 bg-amber-50 p-3 rounded-xl">
+                        <span class="bg-amber-200 text-amber-900 font-black text-xs px-3 py-1 rounded-lg whitespace-nowrap min-w-[120px] text-center">11:30 - 13:00</span>
+                        <span class="font-bold text-amber-900 text-xs uppercase tracking-wider">Break (Friday Prayer & Lunch)</span>
+                    </div>
+
+                    <!-- 13:00 - 13:50 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-start pt-4">
+                        <span class="bg-blue-100 text-blue-900 font-black text-xs px-3 py-1.5 rounded-lg whitespace-nowrap min-w-[120px] text-center">13:00 - 13:50</span>
+                        <div class="w-full">
+                            <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Symposium 4</span>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">"The Art of Modern Kidney Transplant Surgery: From Scarless Donor Nephrectomy to Optimal Recipient Implantation"</h4>
+                            <p class="text-xs text-slate-500 mb-3"><strong>Moderator:</strong> dr. Tanaya Ghinorawa, Sp.U(K)</p>
+                            
+                            <div class="space-y-2 text-xs sm:text-sm text-slate-700 pl-2 border-l-2 border-blue-100">
+                                <div>
+                                    <span class="font-bold text-blue-950">13:00 - 13:20 | Speaker 1:</span> Dr. dr. Sakti R. Brodjonegoro, Sp.U(K)
+                                    <p class="italic text-slate-600">"No Scar, No Compromise: Transvaginal Natural Orifice Specimen Extraction (NOSE) and Laparoscopic Donor Nephrectomy — Technique, Safety, and Donor Experience"</p>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-blue-950">13:20 - 13:40 | Speaker 2:</span> Prof. Dr. dr. Nur Rasyid, Sp.U(K)
+                                    <p class="italic text-slate-600">"The Recipient Side of Success: Surgical Technique, Anatomical Considerations, and Technical Pitfalls in Kidney Transplant Implantation"</p>
+                                </div>
+                                <p class="text-slate-500 font-semibold pt-1">13:40 - 13:50 | Discussion & Q&A</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 14:00 - 16:30 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-start pt-4">
+                        <span class="bg-purple-100 text-purple-900 font-black text-xs px-3 py-1.5 rounded-lg whitespace-nowrap min-w-[120px] text-center">14:00 - 16:30</span>
+                        <div class="w-full">
+                            <span class="font-bold text-purple-900 text-xs uppercase tracking-wider block">Scientific Competition Sessions</span>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+                                <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl">
+                                    <span class="font-extrabold text-blue-900 text-sm block">Oral Presentation Session</span>
+                                    <p class="text-xs text-slate-600 mt-1">15 Presenters (10 minutes per presenter)</p>
+                                    <p class="text-xs font-bold text-purple-900 mt-2">Judges: FIIR Team</p>
+                                </div>
+                                <div class="bg-amber-50 border border-amber-200 p-4 rounded-xl">
+                                    <span class="font-extrabold text-amber-900 text-sm block">Poster Presentation Session</span>
+                                    <p class="text-xs text-slate-600 mt-1">Poster Exhibition Hall (14:00 - Finish)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <!-- DAY 2 AGENDA -->
+            <!-- DAY 2 RUNDOWN -->
             <div class="border border-blue-200 rounded-2xl overflow-hidden shadow-sm">
                 <div class="bg-blue-950 text-white p-4 sm:p-6 flex flex-wrap justify-between items-center gap-2">
                     <div>
@@ -380,137 +390,207 @@
                 </div>
 
                 <div class="divide-y divide-blue-50 p-4 sm:p-6 space-y-6 text-sm bg-white">
-                    <div class="bg-amber-50/50 p-4 rounded-xl border-l-4 border-amber-500">
-                        <span class="font-bold text-amber-800 text-xs uppercase tracking-wider block">Plenary Lecture 2</span>
-                        <h4 class="font-extrabold text-slate-900 text-base mt-1">Clearing the Path Beyond Immunological Barriers: The Expanding Role of Therapeutic Plasma Exchange in Kidney Transplantation</h4>
+                    
+                    <!-- 08:30 - 09:00 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-start">
+                        <span class="bg-amber-100 text-amber-900 font-black text-xs px-3 py-1.5 rounded-lg whitespace-nowrap min-w-[120px] text-center">08:30 - 09:00</span>
+                        <div class="w-full bg-amber-50/60 p-4 rounded-xl border-l-4 border-amber-500">
+                            <span class="font-bold text-amber-800 text-xs uppercase tracking-wider block">Plenary Lecture 2</span>
+                            <h4 class="font-extrabold text-slate-900 text-base mt-1">"Clearing the Path Beyond Immunological Barriers: The Expanding Role of Therapeutic Plasma Exchange in Kidney Transplantation"</h4>
+                            <p class="text-xs text-slate-600 mt-2"><strong>Moderator:</strong> dr. Trisula Utomo, Sp.U(K)</p>
+                            <p class="text-xs text-amber-900 font-bold mt-1"><strong>Speaker:</strong> Dr. dr. Pringgodigdo Nugroho, Sp.PD-KGH</p>
+                        </div>
                     </div>
 
-                    <div class="pt-4">
-                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Simposium 5</span>
-                        <h4 class="font-bold text-slate-900 text-base mb-2">Advancing Transplantation in the Era of Precision Medicine: Optimizing Long-Term Outcomes Through Innovation, Collaboration, and Personalized Immunosuppression</h4>
-                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
-                            <li>The Future of Immunosuppression in Kidney Transplantation: Balancing Rejection Prevention, Infection Risk, and Graft Longevity</li>
-                            <li>The Role of Tacrolimus Once Daily Versus Twice Daily in De Novo Kidney Transplant Patients: From Evidence-Based to Clinical Practice</li>
-                            <li class="italic text-slate-500">Discussion & Q&A</li>
-                        </ul>
+                    <!-- 09:00 - 09:50 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-start pt-4">
+                        <span class="bg-blue-100 text-blue-900 font-black text-xs px-3 py-1.5 rounded-lg whitespace-nowrap min-w-[120px] text-center">09:00 - 09:50</span>
+                        <div class="w-full">
+                            <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Symposium 5</span>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">"Advancing Transplantation in the Era of Precision Medicine: Optimizing Long-Term Outcomes Through Innovation, Collaboration, and Personalized Immunosuppression"</h4>
+                            <p class="text-xs text-slate-500 mb-3"><strong>Moderator:</strong> Prof. Dr. dr. Endang Susalit, Sp.PD-KGH, FINASIM</p>
+                            
+                            <div class="space-y-2 text-xs sm:text-sm text-slate-700 pl-2 border-l-2 border-blue-100">
+                                <div>
+                                    <span class="font-bold text-blue-950">09:00 - 09:20 | Speaker 1:</span> Dr. dr. Lestariningsih, Sp.PD-KGH, FINASIM
+                                    <p class="italic text-slate-600">"The Future of Immunosuppression in Kidney Transplantation: Balancing Rejection Prevention, Infection Risk, and Graft Longevity"</p>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-blue-950">09:20 - 09:40 | Speaker 2:</span> Dr. dr. Maruhum Bonar H. Marbun, Sp.PD-KGH, FINASIM
+                                    <p class="italic text-slate-600">"The Role of Tacrolimus Once Daily Versus Tacrolimus Twice Daily in De Novo Kidney Transplant Patients: From Evidence-Based to Clinical Practice"</p>
+                                </div>
+                                <p class="text-slate-500 font-semibold pt-1">09:40 - 09:50 | Discussion & Q&A</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="pt-4">
-                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Simposium 6</span>
-                        <h4 class="font-bold text-slate-900 text-base mb-2">Protecting the Graft at Every Stage: Tailored Induction and Sustained Antiproliferative Therapy in Kidney Transplantation</h4>
-                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
-                            <li>Start Strong, Stay Safe: The Role of Basiliximab Induction in Low-to-Moderate Immunological Risk Kidney Recipients</li>
-                            <li>Don't Break the Backbone: Mycophenolate Exposure, Dose Reduction, and Their Impact on Rejection and Long-Term Graft Outcomes</li>
-                            <li class="italic text-slate-500">Discussion & Q&A</li>
-                        </ul>
+                    <!-- 09:50 - 10:40 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-start pt-4">
+                        <span class="bg-blue-100 text-blue-900 font-black text-xs px-3 py-1.5 rounded-lg whitespace-nowrap min-w-[120px] text-center">09:50 - 10:40</span>
+                        <div class="w-full">
+                            <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Symposium 6</span>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">"Protecting the Graft at Every Stage: Tailored Induction and Sustained Antiproliferative Therapy in Kidney Transplantation"</h4>
+                            <p class="text-xs text-slate-500 mb-3"><strong>Moderator:</strong> dr. Yulia Wardhani, Sp.PD-KGH</p>
+                            
+                            <div class="space-y-2 text-xs sm:text-sm text-slate-700 pl-2 border-l-2 border-blue-100">
+                                <div>
+                                    <span class="font-bold text-blue-950">09:50 - 10:10 | Speaker 1:</span> Prof. Dr. dr. I Gde Raka Widiana, Sp.PD-KGH, FINASIM
+                                    <p class="italic text-slate-600">"Start Strong, Stay Safe: The Role of Basiliximab Induction in Low-to-Moderate Immunological Risk Kidney Recipient"</p>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-blue-950">10:10 - 10:30 | Speaker 2:</span> dr. Iri Kuswadi, Sp.PD-KGH
+                                    <p class="italic text-slate-600">"Don't Break the Backbone: Mycophenolate Exposure, Dose Reduction, and Their Impact on Rejection and Long-Term Graft Outcomes"</p>
+                                </div>
+                                <p class="text-slate-500 font-semibold pt-1">10:30 - 10:40 | Discussion & Q&A</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="pt-4">
-                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Simposium 7</span>
-                        <h4 class="font-bold text-slate-900 text-base mb-2">Advancing Hematopoietic Stem Cell Transplantation in Indonesia: From Real-World Needs to Center Readiness and Program Implementation</h4>
-                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
-                            <li>Real-World Challenges in Developing Autologous Stem Cell Transplantation at Dr. Sardjito General Hospital</li>
-                            <li>Kariadi Hospital's Experience in Developing a Hematopoietic Stem Cell Transplant Program</li>
-                            <li class="italic text-slate-500">Discussion & Q&A</li>
-                        </ul>
+                    <!-- 10:40 - 11:30 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-start pt-4">
+                        <span class="bg-blue-100 text-blue-900 font-black text-xs px-3 py-1.5 rounded-lg whitespace-nowrap min-w-[120px] text-center">10:40 - 11:30</span>
+                        <div class="w-full">
+                            <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Symposium 7</span>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">"Advancing Hematopoietic Stem Cell Transplantation in Indonesia: From Real-World Needs to Center Readiness and Program Implementation"</h4>
+                            <p class="text-xs text-slate-500 mb-3"><strong>Moderator:</strong> dr. Yasjudan Rastrama Putra, Sp.PD, Subsp.H.Onk.M(K)</p>
+                            
+                            <div class="space-y-2 text-xs sm:text-sm text-slate-700 pl-2 border-l-2 border-blue-100">
+                                <div>
+                                    <span class="font-bold text-blue-950">10:40 - 11:00 | Speaker 1:</span> dr. Mardiah Suci Hardianti, Ph.D., Sp.PD, Subsp.H.Onk.M(K)
+                                    <p class="italic text-slate-600">"Real-World Challenges in Developing Autologous Stem Cell Transplantation at Dr. Sardjito General Hospital"</p>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-blue-950">11:00 - 11:20 | Speaker 2:</span> Dr. dr. Damai Santosa, Sp.PD, Subsp.H.Onk.M(K)
+                                    <p class="italic text-slate-600">"Kariadi Hospital's Experience in Developing a Hematopoietic Stem Cell Transplant Program"</p>
+                                </div>
+                                <p class="text-slate-500 font-semibold pt-1">11:20 - 11:30 | Discussion & Q&A</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="pt-4">
-                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Simposium 8</span>
-                        <h4 class="font-bold text-slate-900 text-base mb-2">Beyond the Crossmatch: Precision Histocompatibility for Safer Kidney Transplantation in Indonesia</h4>
-                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
-                            <li>Reading the Immunological Risk: How HLA Typing, DSA, and Crossmatch Results Guide Clinical Decisions from Donor Selection to Follow-Up</li>
-                            <li>HLA-Guided Immunosuppression: From Immunological Risk to Personalized Kidney Transplant Care</li>
-                            <li class="italic text-slate-500">Discussion & Q&A</li>
-                        </ul>
+                    <!-- 11:30 - 12:30 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-center pt-4 bg-amber-50 p-3 rounded-xl">
+                        <span class="bg-amber-200 text-amber-900 font-black text-xs px-3 py-1 rounded-lg whitespace-nowrap min-w-[120px] text-center">11:30 - 12:30</span>
+                        <span class="font-bold text-amber-900 text-xs uppercase tracking-wider">Break (Rest, Prayer & Lunch)</span>
                     </div>
 
-                    <div class="pt-4">
-                        <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Simposium 9</span>
-                        <h4 class="font-bold text-slate-900 text-base mb-2">Elevating Care, Overcoming Limits: The Future of Pediatric Living Donor Liver Transplantation</h4>
-                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 pl-2">
-                            <li>Beyond Size, Beyond Limits: Advancing Pediatric Liver Transplantation Through Surgical and Hepatological Excellence</li>
-                            <li>Small Vessels, High Stakes: Surgical Techniques and Complication Management in Pediatric Living Donor Liver Transplantation</li>
-                            <li class="italic text-slate-500">Discussion & Q&A</li>
-                        </ul>
+                    <!-- 12:30 - 13:20 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-start pt-4">
+                        <span class="bg-blue-100 text-blue-900 font-black text-xs px-3 py-1.5 rounded-lg whitespace-nowrap min-w-[120px] text-center">12:30 - 13:20</span>
+                        <div class="w-full">
+                            <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Symposium 8</span>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">"Beyond the Crossmatch: Precision Histocompatibility for Safer Kidney Transplantation in Indonesia"</h4>
+                            <p class="text-xs text-slate-500 mb-3"><strong>Moderator:</strong> Dr. dr. Teguh Triyono, M.Kes, Sp.PK, Subsp.KV(K), Subsp.BDKT(K)</p>
+                            
+                            <div class="space-y-2 text-xs sm:text-sm text-slate-700 pl-2 border-l-2 border-blue-100">
+                                <div>
+                                    <span class="font-bold text-blue-950">12:30 - 12:50 | Speaker 1:</span> dr. Ira Puspitawati, M.Kes, Sp.PK, Subsp.NR(K)
+                                    <p class="italic text-slate-600">"Reading the Immunological Risk: How HLA Typing, DSA, and Crossmatch Results Guide Clinical Decisions from Donor Selection to Follow-Up"</p>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-blue-950">12:50 - 13:10 | Speaker 2:</span> Dr. dr. Metalia Puspitasari, M.Sc., Sp.PD-KGH
+                                    <p class="italic text-slate-600">"HLA-Guided Immunosuppression: From Immunological Risk to Personalized Kidney Transplant Care"</p>
+                                </div>
+                                <p class="text-slate-500 font-semibold pt-1">13:10 - 13:20 | Discussion & Q&A</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="bg-gradient-to-r from-blue-950 to-blue-900 text-white p-4 rounded-xl mt-6">
-                        <span class="font-extrabold text-amber-400 text-xs uppercase tracking-wider block">Closing Activities</span>
-                        <p class="text-sm font-semibold mt-1">Consensus Launch, Scientific Competition Awards, Door Prize, and Closing Ceremony</p>
+                    <!-- 13:20 - 14:15 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-start pt-4">
+                        <span class="bg-blue-100 text-blue-900 font-black text-xs px-3 py-1.5 rounded-lg whitespace-nowrap min-w-[120px] text-center">13:20 - 14:15</span>
+                        <div class="w-full">
+                            <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Symposium 9</span>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">"Elevating Care, Overcoming Limits: The Future of Pediatric Living Donor Liver Transplantation"</h4>
+                            <p class="text-xs text-slate-500 mb-3"><strong>Moderator:</strong> Prof. dr. Gunadi, Ph.D, Sp.BA, Subsp.D.A(K)</p>
+                            
+                            <div class="space-y-2 text-xs sm:text-sm text-slate-700 pl-2 border-l-2 border-blue-100">
+                                <div>
+                                    <span class="font-bold text-blue-950">13:20 - 13:40 | Speaker 1:</span> dr. Sastiono, Sp.B, Subsp.Ped(K) (Jakarta)
+                                    <p class="italic text-slate-600">"Beyond Size, Beyond Limits: Advancing Pediatric Liver Transplantation Through Surgical and Hepatological Excellence"</p>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-blue-950">13:40 - 14:00 | Speaker 2:</span> Prof. Hideaki Okajima, MD, Ph.D
+                                    <p class="italic text-slate-600">"Small Vessels, High Stakes: Surgical Techniques and Complication Management in Pediatric Living Donor Liver Transplantation"</p>
+                                </div>
+                                <p class="text-slate-500 font-semibold pt-1">14:00 - 14:15 | Discussion & Q&A</p>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- 14:15 - 15:05 -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-start pt-4">
+                        <span class="bg-gradient-to-r from-blue-950 to-blue-900 text-amber-400 font-black text-xs px-3 py-1.5 rounded-lg whitespace-nowrap min-w-[120px] text-center">14:15 - 15:05</span>
+                        <div class="w-full bg-gradient-to-r from-blue-950 to-blue-900 text-white p-5 rounded-xl space-y-2">
+                            <span class="font-extrabold text-amber-400 text-xs uppercase tracking-wider block">Closing Activities & Awarding</span>
+                            <ul class="list-disc list-inside text-xs sm:text-sm text-blue-100 space-y-1">
+                                <li>Launch of the Organ Transplantation and Cadaveric Donor Consensus</li>
+                                <li>Announcement of Scientific Competition Winners</li>
+                                <li>Door Prize</li>
+                                <li>Closing Remarks & Event Report by the Organizing Committee Chair</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- FIIR AWARDS SECTION -->
-        <section id="awards" class="bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white rounded-2xl p-6 sm:p-10 shadow-xl border border-slate-800">
+        <!-- FIIR AWARDS -->
+        <section id="awards" class="bg-gradient-to-br from-blue-950 via-slate-900 to-red-950 text-white rounded-2xl p-6 sm:p-10 shadow-xl border border-blue-900">
             <div class="text-center max-w-3xl mx-auto mb-8">
                 <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Presented by Fahrul Institute for Innovation and Research (FIIR)</span>
                 <h2 class="text-2xl sm:text-4xl font-extrabold mt-1 text-white">Scientific FIIR Awards 2026</h2>
-                <p class="text-slate-300 text-sm mt-2">Proudly supporting excellence in research, innovation, and scientific paper presentation!</p>
+                <p class="text-blue-200 text-sm mt-2">Proudly supporting excellence in research, innovation, and scientific paper presentation!</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-slate-900/90 border-2 border-amber-400 rounded-2xl p-6 text-center shadow-lg relative overflow-hidden">
-                    <span class="bg-amber-400 text-slate-950 text-[10px] font-black px-3 py-1 rounded-full uppercase absolute top-3 right-3">Top Prize</span>
+                <div class="bg-blue-900/80 border-2 border-amber-400 rounded-2xl p-6 text-center shadow-lg relative overflow-hidden backdrop-blur">
+                    <span class="bg-amber-400 text-blue-950 text-[10px] font-black px-3 py-1 rounded-full uppercase absolute top-3 right-3">Top Prize</span>
                     <h3 class="font-black text-amber-300 text-lg">Grand Winner</h3>
                     <p class="text-3xl font-extrabold text-white my-2">IDR 12,000,000</p>
                     <p class="text-xs text-amber-200 font-semibold">+ Q1 Journal Voucher (USD 2,000)</p>
                 </div>
 
-                <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 text-center">
+                <div class="bg-blue-900/60 border border-blue-700 rounded-2xl p-6 text-center backdrop-blur">
                     <h3 class="font-bold text-slate-200 text-lg">First Runner-Up</h3>
                     <p class="text-3xl font-extrabold text-white my-2">IDR 9,000,000</p>
-                    <p class="text-xs text-slate-400">+ Q1 Journal Voucher (USD 2,000)</p>
+                    <p class="text-xs text-blue-200">+ Q1 Journal Voucher (USD 2,000)</p>
                 </div>
 
-                <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 text-center">
+                <div class="bg-blue-900/60 border border-blue-700 rounded-2xl p-6 text-center backdrop-blur">
                     <h3 class="font-bold text-slate-200 text-lg">Second Runner-Up</h3>
                     <p class="text-3xl font-extrabold text-white my-2">IDR 7,000,000</p>
-                    <p class="text-xs text-slate-400">+ Q1 Journal Voucher (USD 2,000)</p>
+                    <p class="text-xs text-blue-200">+ Q1 Journal Voucher (USD 2,000)</p>
                 </div>
             </div>
         </section>
 
-        <!-- ABSTRACT SUBMISSION SECTION -->
-        <section id="abstract" class="inats-section bg-white rounded-2xl p-6 sm:p-10 shadow-xl border border-slate-200">
+        <!-- ABSTRACT SUBMISSION (CLOSED ANNOUNCEMENT) -->
+        <section id="abstract" class="bg-inats-card rounded-2xl p-6 sm:p-10 shadow-xl border border-blue-100">
             
             <div class="text-center max-w-3xl mx-auto mb-8">
                 <span class="text-red-600 font-bold text-xs uppercase tracking-widest">Call For Abstracts</span>
-                <div class="inats-accent-line"></div>
-                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-1">Abstract Submission Portal</h2>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-blue-950 mt-1">Abstract Submission Status</h2>
                 
-                <div class="mt-6 bg-slate-950 text-white rounded-2xl p-5 border-2 border-amber-500/50 shadow-inner max-w-md mx-auto">
-                    <p class="text-amber-400 font-bold text-xs uppercase tracking-wider mb-2">⏰ Abstract Deadline: 19 October 2026 (24.00 WIB)</p>
-                    <div id="countdownBox" class="grid grid-cols-4 gap-2 text-center">
-                        <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800"><span id="cd-days" class="block text-2xl font-bold text-white">00</span><span class="text-[9px] text-slate-400 uppercase font-semibold">Days</span></div>
-                        <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800"><span id="cd-hours" class="block text-2xl font-bold text-white">00</span><span class="text-[9px] text-slate-400 uppercase font-semibold">Hours</span></div>
-                        <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800"><span id="cd-minutes" class="block text-2xl font-bold text-white">00</span><span class="text-[9px] text-slate-400 uppercase font-semibold">Mins</span></div>
-                        <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800"><span id="cd-seconds" class="block text-2xl font-bold text-amber-400">00</span><span class="text-[9px] text-slate-400 uppercase font-semibold">Secs</span></div>
+                <!-- CLOSED STATUS BANNER -->
+                <div class="mt-6 bg-slate-900 text-white rounded-2xl p-6 border-2 border-red-500/80 shadow-xl max-w-lg mx-auto">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-red-500/20 text-red-400 rounded-full mb-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m0 0v2m0-2h2m-2 0H10m11-3V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2zM9 9h6"></path></svg>
                     </div>
-                    <p id="closedMessage" class="hidden text-red-400 font-bold text-sm mt-2">
-                        ⛔ Abstract Submission is Now Closed!
+                    <h3 class="text-xl font-extrabold text-red-400">Abstract Submission is Closed</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm mt-2">
+                        The deadline for abstract submission was <strong>17 October 2026 at 23:59 WIB</strong>. We are no longer accepting new submissions.
+                    </p>
+                    <p class="text-amber-300 text-xs font-semibold mt-3 bg-blue-950/80 py-2 px-4 rounded-xl border border-blue-800 inline-block">
+                        Thank you to all authors who submitted their scientific work!
                     </p>
                 </div>
             </div>
 
-            <div class="bg-blue-50 border-l-4 border-blue-600 p-5 mb-8 rounded-r-xl">
-                <h3 class="font-bold text-blue-900 text-base mb-2 flex items-center gap-2">
-                    📋 General Policies & Submission Rules
-                </h3>
-                <ul class="text-xs sm:text-sm text-blue-800 list-disc list-inside space-y-1">
-                    <li>All abstracts must be prepared according to the correct format and requirements as stated in this guideline.</li>
-                    <li>Abstracts must be original, have not been published, and are not under review elsewhere.</li>
-                    <li>All abstracts must be written in <strong>English</strong>.</li>
-                    <li>Authors whose abstracts are accepted are required to register and present their work at the 10th Annual Meeting of InaTS 2026.</li>
-                    <li>Accepted abstracts will be selected for presentation as <strong>Oral Presentation</strong> or <strong>Poster Presentation</strong>.</li>
-                    <li>Notification of acceptance will be sent to the presenting author via email.</li>
-                </ul>
-            </div>
-
-            <div class="mb-10 bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-6 shadow-sm">
-                <div class="rounded-xl overflow-hidden shadow border border-slate-300">
+            <!-- SCIENTIFIC COMPETITION RULES (REFERENCE) -->
+            <div class="bg-white border border-blue-200 rounded-2xl p-4 sm:p-6 shadow-sm">
+                <div class="rounded-xl overflow-hidden shadow border border-slate-200">
                     <img src="InaTS_Scientific_Competition_Rules_2026.png" alt="Scientific Competition Rules InaTS 2026" class="w-full h-auto">
                 </div>
                 <div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-5 text-sm">
@@ -530,99 +610,89 @@
                         <h3 class="text-lg font-extrabold text-red-800 mb-3">Specific Provisions</h3>
                         <ol class="list-decimal pl-5 space-y-2 text-slate-700">
                             <li>Participants must be registered for the InaTS 2026 symposium.</li>
-                            <li>Submit abstracts through the <a class="font-bold text-blue-700 underline break-all" href="https://bit.ly/SubmitAbstractInaTS2026" target="_blank" rel="noopener noreferrer">official abstract submission link</a>.</li>
-                            <li>Deadline: <strong class="text-red-700">17 October 2026 at 24.00 WIB (Western Indonesian Time)</strong>.</li>
-                            <li>Each participant may submit more than one abstract.</li>
-                            <li>Certificates are issued only to the presenting (first) author, after the participant has submitted the abstract and e-poster.</li>
-                        </ol>
-                    </div>
-                    <div class="rounded-2xl border border-slate-200 bg-white p-5 lg:col-span-2">
-                        <h3 class="text-lg font-extrabold text-blue-950 mb-3">Abstract-Specific Provisions</h3>
-                        <ol class="list-decimal pl-5 space-y-2 text-slate-700">
-                            <li>The abstract must fit on one page of A4 paper.</li>
-                            <li>Margins: left 4 cm, right 3 cm, top 3 cm, and bottom 3 cm.</li>
-                            <li>Order: scientific paper title, presenting (first) author, second and third authors, affiliated division, medical faculty, and university. The title must be in <em>Times New Roman</em>, 12 pt, italic. Authors' names must be in <em>Times New Roman</em>, 10 pt, bold. A maximum of 9 co-authors is allowed. Co-authors' names, division, faculty, and university must be in <em>Times New Roman</em>, 10 pt, with line spacing 1.</li>
-                            <li>The main text must be in <em>Times New Roman</em>, 10 pt, single-spaced. Section titles must be bold. The abstract must not exceed <strong>300 words</strong>.</li>
+                            <li>Deadline: <strong class="text-red-700">17 October 2026 at 23:59 WIB (Closed)</strong>.</li>
+                            <li>Certificates are issued only to the presenting (first) author.</li>
                         </ol>
                     </div>
                 </div>
             </div>
 
-            <form id="abstractForm" class="space-y-6 max-w-3xl mx-auto">
-                <div class="border-b pb-6">
-                    <h3 class="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
-                        <span class="bg-slate-900 text-white rounded-full w-7 h-7 flex items-center justify-center text-xs">1</span>
-                        Presenting Author Details
-                    </h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
-                        <div>
-                            <label class="block font-medium mb-1">Full Name (with Academic Titles) *</label>
-                            <input type="text" name="author_name" placeholder="dr. Jane Doe, Sp.PD" required class="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-600 outline-none">
-                        </div>
-                        <div>
-                            <label class="block font-medium mb-1">Email Address *</label>
-                            <input type="email" name="author_email" placeholder="author@example.com" required class="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-600 outline-none">
-                        </div>
-                        <div>
-                            <label class="block font-medium mb-1">Institution / Affiliation *</label>
-                            <input type="text" name="institution" placeholder="e.g. Universitas Gadjah Mada" required class="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-600 outline-none">
-                        </div>
-                        <div>
-                            <label class="block font-medium mb-1">WhatsApp / Phone Number *</label>
-                            <input type="tel" name="phone" placeholder="+62 812..." required class="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-600 outline-none">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border-b pb-6 text-xs sm:text-sm">
-                    <h3 class="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
-                        <span class="bg-slate-900 text-white rounded-full w-7 h-7 flex items-center justify-center text-xs">2</span>
-                        Submission Details
-                    </h3>
-                    <div class="mb-4">
-                        <label class="block font-medium mb-1">Abstract Category *</label>
-                        <select name="category" required class="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-600 outline-none bg-white">
-                            <option value="">-- Select Category --</option>
-                            <option value="original_research">Original Research Article</option>
-                            <option value="case_report">Case Report</option>
-                            <option value="systematic_review">Systematic Review / Meta-Analysis</option>
-                        </select>
-                    </div>
-                    <div class="mb-4">
-                        <label class="block font-medium mb-1">Abstract Title *</label>
-                        <input type="text" name="title" required class="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-600 outline-none">
-                    </div>
-                    <div>
-                        <label class="block font-medium mb-1">Authors & Affiliations List *</label>
-                        <textarea name="authors_list" rows="2" placeholder="e.g. Jane Doe1, John Smith2 (1. Dept. of Internal Medicine UGM...)" required class="w-full border rounded-xl p-3 focus:ring-2 focus:ring-blue-600 outline-none"></textarea>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
-                        <span class="bg-slate-900 text-white rounded-full w-7 h-7 flex items-center justify-center text-xs">3</span>
-                        Upload Abstract File
-                    </h3>
-                    <div class="border-2 border-dashed border-slate-300 rounded-2xl p-6 text-center hover:border-blue-500 transition bg-slate-50">
-                        <input type="file" id="abstractFile" name="abstract_file" accept=".doc,.docx,.pdf" required class="hidden" onchange="displayFileName(this)">
-                        <label for="abstractFile" class="cursor-pointer flex flex-col items-center">
-                            <svg class="w-10 h-10 text-slate-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
-                            <span class="text-sm font-semibold text-blue-600">Click to upload abstract file</span>
-                            <span class="text-xs text-slate-500 mt-1">Accepted Formats: DOC, DOCX, or PDF (Max 10MB)</span>
-                            <span id="fileName" class="mt-4 px-4 py-2 bg-emerald-100 text-emerald-800 font-medium text-xs rounded-xl border border-emerald-300 hidden"></span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="pt-4">
-                    <button type="submit" id="submitBtn" class="w-full bg-[#9f1830] hover:bg-[#7f1226] text-white font-extrabold py-4 px-6 rounded-2xl shadow-lg hover:shadow-red-900/30 transition text-base">
-                        Submit Abstract
-                    </button>
-                </div>
-            </form>
         </section>
 
-       <!-- REGISTRATION SECTION (DARK BACKGROUND) -->
+        <!-- PADEL TOURNAMENT SECTION (UPDATED WITH SIDE-BY-SIDE IMAGE) -->
+        <section id="InaTS_Padel_Tournament_2026" class="bg-inats-card rounded-2xl p-6 sm:p-10 shadow-xl border border-blue-100">
+            <div class="text-center max-w-4xl mx-auto mb-8">
+                <span class="inline-flex items-center rounded-full px-4 py-1.5 bg-red-50 text-red-800 border border-red-200 text-xs font-extrabold uppercase tracking-widest">Social Event · Play · Connect · Beyond Limits</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-blue-950 mt-2">InaTS 2026 Padel Tournament</h2>
+                <p class="text-slate-600 mt-2">Good Rally, Greater Friendship — Same Passion, Stronger Connections</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- Half Screen Poster Image -->
+                <div class="rounded-2xl overflow-hidden border border-blue-200 shadow-lg bg-blue-50">
+                    <img src="InaTS_Padel_Tournament_2026.jpg" alt="InaTS 2026 Padel Tournament Poster" class="w-full h-auto object-cover" loading="lazy">
+                </div>
+
+                <!-- Padel Details Side-by-Side -->
+                <div class="space-y-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="rounded-2xl p-5 bg-blue-950 text-white shadow-sm">
+                            <p class="text-blue-200 text-xs font-bold uppercase tracking-widest">Date & Time</p>
+                            <p class="text-lg font-extrabold mt-2">Saturday, 21 November 2026</p>
+                            <p class="text-blue-100">19.00–22.00 WIB</p>
+                        </div>
+                        <div class="rounded-2xl p-5 bg-red-50 border border-red-100">
+                            <p class="text-red-800 text-xs font-bold uppercase tracking-widest">Venue</p>
+                            <p class="text-lg font-extrabold text-blue-950 mt-2">Wii Social Hub</p>
+                            <p class="text-xs text-slate-700">Jl. Kusumanegara No. 127, Muja Muju, Umbulharjo, Yogyakarta</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-200 p-5 bg-white">
+                        <h3 class="font-extrabold text-blue-950 text-base mb-2">Tournament Categories</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="rounded-full bg-blue-50 text-blue-900 px-3 py-1 text-xs font-bold">Men's Doubles</span>
+                            <span class="rounded-full bg-blue-50 text-blue-900 px-3 py-1 text-xs font-bold">Women's Doubles</span>
+                            <span class="rounded-full bg-blue-50 text-blue-900 px-3 py-1 text-xs font-bold">Mixed Doubles</span>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-amber-200 bg-amber-50/70 p-5">
+                        <h3 class="font-extrabold text-blue-950 text-base mb-3">Awards & Prizes</h3>
+                        <div class="grid grid-cols-3 gap-2 text-center">
+                            <div class="bg-white rounded-xl p-2.5 border border-amber-100">
+                                <p class="text-[10px] font-bold text-amber-800">1st Winner</p>
+                                <p class="text-base font-black text-blue-950">Rp 2.000.000</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-2.5 border border-amber-100">
+                                <p class="text-[10px] font-bold text-amber-800">2nd Winner</p>
+                                <p class="text-base font-black text-blue-950">Rp 1.500.000</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-2.5 border border-amber-100">
+                                <p class="text-[10px] font-bold text-amber-800">3rd Winner</p>
+                                <p class="text-base font-black text-blue-950">Rp 1.000.000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-blue-100 space-y-4 text-sm shadow-sm">
+                        <h3 class="font-extrabold text-blue-950 text-lg">Padel Contact Persons</h3>
+                        <div>
+                            <p class="text-xs uppercase tracking-wider text-slate-500 font-bold">Contact Person 1</p>
+                            <p class="font-extrabold text-slate-900">dr. Nico, SpPD</p>
+                            <a class="font-bold text-blue-700" href="tel:+6281345321497">+62 813-4532-1497</a>
+                        </div>
+                        <div class="pt-2 border-t border-slate-100">
+                            <p class="text-xs uppercase tracking-wider text-slate-500 font-bold">Contact Person 2</p>
+                            <p class="font-extrabold text-slate-900">dr. Dyah Arum, SpPD</p>
+                            <a class="font-bold text-blue-700" href="tel:+6281226777789">0812-2677-7789</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REGISTRATION SECTION (DARK BACKGROUND) -->
         <section id="registration" class="bg-gradient-to-br from-blue-950 via-slate-900 to-blue-900 text-white rounded-2xl p-6 sm:p-10 shadow-2xl border border-blue-800">
             <div class="text-center max-w-3xl mx-auto mb-8">
                 <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Official Registration Portal</span>
@@ -654,59 +724,8 @@
             </div>
         </section>
 
-        <!-- PADEL TOURNAMENT -->
-        <section id="padel" class="inats-section rounded-2xl p-6 sm:p-10 shadow-xl border border-blue-100 bg-white">
-            <div class="text-center max-w-4xl mx-auto mb-8">
-                <span class="inline-flex items-center rounded-full px-4 py-1.5 bg-red-50 text-red-800 border border-red-200 text-xs font-extrabold uppercase tracking-widest">Social Event · Play · Connect · Beyond Limits</span>
-                <div class="inats-accent-line"></div>
-                <h2 class="text-2xl sm:text-4xl font-black text-blue-950 mt-2">InaTS 2026 Padel Tournament</h2>
-                <p class="text-slate-600 mt-2">Good Rally, Greater Friendship — Same Passion, Stronger Connections</p>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
-                <div class="lg:col-span-2 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
-                    <img src="InaTS_Padel_Tournament_2026.jpg" alt="InaTS 2026 Padel Tournament announcement poster" class="w-full h-auto" loading="lazy">
-                </div>
-                <div class="lg:col-span-3 space-y-5">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="rounded-2xl p-5 bg-blue-950 text-white shadow-sm">
-                            <p class="text-blue-200 text-xs font-bold uppercase tracking-widest">Date & Time</p>
-                            <p class="text-lg font-extrabold mt-2">Saturday, 21 November 2026</p>
-                            <p class="text-blue-100">19.00–22.00 WIB</p>
-                        </div>
-                        <div class="rounded-2xl p-5 bg-red-50 border border-red-100">
-                            <p class="text-red-800 text-xs font-bold uppercase tracking-widest">Venue</p>
-                            <p class="text-lg font-extrabold text-blue-950 mt-2">Wii Social Hub</p>
-                            <p class="text-sm text-slate-700">Jl. Kusumanegara No. 127, Muja Muju, Umbulharjo, Yogyakarta</p>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Wii+Social+Hub+Jl+Kusumanegara+No+127+Yogyakarta" target="_blank" rel="noopener noreferrer" class="inline-flex mt-3 font-bold text-sm text-blue-700 underline">Open location in Google Maps ↗</a>
-                        </div>
-                    </div>
-                    <div class="rounded-2xl border border-slate-200 p-5">
-                        <h3 class="font-extrabold text-blue-950 text-lg mb-3">Tournament Categories</h3>
-                        <div class="flex flex-wrap gap-2"><span class="rounded-full bg-blue-50 text-blue-900 px-3 py-2 text-sm font-bold">Men's Doubles</span><span class="rounded-full bg-blue-50 text-blue-900 px-3 py-2 text-sm font-bold">Women's Doubles</span><span class="rounded-full bg-blue-50 text-blue-900 px-3 py-2 text-sm font-bold">Mixed Doubles</span></div>
-                        <p class="text-sm text-slate-600 mt-3">Open to all InaTS participants, faculty, and the transplant community.</p>
-                    </div>
-                    <div class="rounded-2xl border border-amber-200 bg-amber-50/70 p-5">
-                        <h3 class="font-extrabold text-blue-950 text-lg mb-3">Awards</h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                            <div class="bg-white rounded-xl p-3 border border-amber-100"><p class="text-xs font-bold text-amber-800">1st Winner</p><p class="text-xl font-black text-blue-950">Rp 2,000,000</p><p class="text-xs text-slate-600">Trophy & certificate</p></div>
-                            <div class="bg-white rounded-xl p-3 border border-amber-100"><p class="text-xs font-bold text-amber-800">2nd Winner</p><p class="text-xl font-black text-blue-950">Rp 1,500,000</p><p class="text-xs text-slate-600">Trophy & certificate</p></div>
-                            <div class="bg-white rounded-xl p-3 border border-amber-100"><p class="text-xs font-bold text-amber-800">3rd Winner</p><p class="text-xl font-black text-blue-950">Rp 1,000,000</p><p class="text-xs text-slate-600">Trophy & certificate</p></div>
-                        </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3 text-sm"><div class="rounded-xl bg-white p-3 border border-amber-100"><strong class="text-blue-950">Most Favorite Group</strong><p class="text-slate-600">Trophy, certificate, and exclusive prize</p></div><div class="rounded-xl bg-white p-3 border border-amber-100"><strong class="text-blue-950">Best Costume</strong><p class="text-slate-600">Trophy, certificate, and exclusive prize</p></div></div>
-                    </div>
-                    <div class="rounded-2xl bg-blue-50 border border-blue-100 p-5">
-                        <h3 class="font-extrabold text-blue-950 text-lg mb-3">Tournament Contact Persons</h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div><p class="text-xs uppercase tracking-wider text-slate-500 font-bold">Contact Person 1</p><p class="font-extrabold text-slate-900">dr Nico, SpPD</p><a class="font-bold text-blue-700" href="tel:+6281345321497">+62 813 4532 1497</a></div>
-                            <div><p class="text-xs uppercase tracking-wider text-slate-500 font-bold">Contact Person 2</p><p class="font-extrabold text-slate-900">dr Dyah Arum, SpPD</p><a class="font-bold text-blue-700" href="tel:+6281226777789">0812 2677 7789</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-       <!-- VENUE & HOTEL RESERVATION (HALF WIDTH IMAGE & SIDE BY SIDE CONTACT) -->
-        <section id="venue" class="bg-inats-card rounded-2xl p-6 sm:p-10 shadow-md border border-blue-100">
+        <!-- VENUE & HOTEL RESERVATION -->
+        <section id="Hotel_Reservation" class="bg-inats-card rounded-2xl p-6 sm:p-10 shadow-md border border-blue-100">
             <div class="text-center max-w-3xl mx-auto mb-8">
                 <span class="text-blue-700 font-bold text-xs uppercase tracking-widest">Venue & Accommodations</span>
                 <h2 class="text-2xl sm:text-4xl font-extrabold text-blue-950 mt-1">Hotel Reservation Yogyakarta</h2>
@@ -755,17 +774,14 @@
 
     </main>
 
-  
-    <footer class="bg-slate-950 text-white text-center text-xs py-8 border-t border-slate-800">
-        <p class="font-semibold text-slate-300">10th Annual Meeting of Indonesian Transplantation Society (InaTS 2026)</p>
-        <p class="text-slate-500 mt-1">Yogyakarta, Indonesia | 20–21 November 2026</p>
+    <footer class="bg-blue-950 text-white text-center text-xs py-8 border-t border-blue-900">
+        <p class="font-semibold text-blue-200">10th Annual Meeting of Indonesian Transplantation Society (InaTS 2026)</p>
+        <p class="text-blue-400 mt-1">Yogyakarta, Indonesia | 20–21 November 2026</p>
     </footer>
 
     <!-- SCRIPT -->
     <script>
-        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxx-CO6Rk44yRX4KgM9-WzmegjwyL7KBKeN-bPotE6Y55lugu6V9_vrl5MwCkwBC4rUCA/exec";
-
-        // COUNTDOWN SYMPOSIUM
+        // COUNTDOWN SYMPOSIUM (EVENT DAY)
         function startEventCountdown() {
             const eventTarget = new Date("November 20, 2026 08:00:00 GMT+0700").getTime();
             setInterval(function() {
@@ -780,97 +796,7 @@
             }, 1000);
         }
 
-        // COUNTDOWN DEADLINE
-        function startCountdown() {
-            const targetDate = new Date("October 19, 2026 23:59:59 GMT+0700").getTime();
-
-            const timerInterval = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = targetDate - now;
-
-                if (distance <= 0) {
-                    clearInterval(timerInterval);
-                    document.getElementById("countdownBox").classList.add("hidden");
-                    document.getElementById("closedMessage").classList.remove("hidden");
-                    
-                    const submitBtn = document.getElementById("submitBtn");
-                    if (submitBtn) {
-                        submitBtn.disabled = true;
-                        submitBtn.innerText = "Submission Closed";
-                        submitBtn.classList.replace("bg-[#9f1830]", "bg-gray-500");
-                    }
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById("cd-days").innerText = days < 10 ? "0" + days : days;
-                document.getElementById("cd-hours").innerText = hours < 10 ? "0" + hours : hours;
-                document.getElementById("cd-minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
-                document.getElementById("cd-seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
-            }, 1000);
-        }
-
         startEventCountdown();
-        startCountdown();
-
-        // DISPLAY FILE NAME
-        function displayFileName(input) {
-            const container = document.getElementById('fileName');
-            if (input.files && input.files[0]) {
-                const size = (input.files[0].size / (1024 * 1024)).toFixed(2);
-                container.innerText = "📄 Selected: " + input.files[0].name + " (" + size + " MB)";
-                container.classList.remove('hidden');
-            }
-        }
-
-        // FORM SUBMISSION
-        document.getElementById('abstractForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const submitBtn = document.getElementById('submitBtn');
-            const file = document.getElementById('abstractFile').files[0];
-            if (!file) return alert("Harap pilih file abstrak terlebih dahulu!");
-
-            submitBtn.innerText = "Mengirim data & mengunggah berkas...";
-            submitBtn.disabled = true;
-
-            const reader = new FileReader();
-            reader.onload = function(evt) {
-                const base64Data = evt.target.result.split(',')[1];
-                const formData = new FormData();
-                formData.append('author_name', document.getElementsByName('author_name')[0].value);
-                formData.append('author_email', document.getElementsByName('author_email')[0].value);
-                formData.append('institution', document.getElementsByName('institution')[0].value);
-                formData.append('phone', document.getElementsByName('phone')[0].value);
-                formData.append('category', document.getElementsByName('category')[0].value);
-                formData.append('title', document.getElementsByName('title')[0].value);
-                formData.append('authors_list', document.getElementsByName('authors_list')[0].value);
-                formData.append('file_data', base64Data);
-                formData.append('file_name', file.name);
-                formData.append('file_type', file.type);
-
-                fetch(SCRIPT_URL, { method: 'POST', body: new URLSearchParams(formData) })
-                .then(res => res.json())
-                .then(res => {
-                    if (res.result === 'success') {
-                        alert("Abstrak berhasil terkirim! Terima kasih telah mendaftar di InaTS 2026.");
-                        document.getElementById('abstractForm').reset();
-                        document.getElementById('fileName').classList.add('hidden');
-                    } else {
-                        alert("Gagal mengirim data: " + res.error);
-                    }
-                })
-                .catch(err => alert("Terjadi kesalahan koneksi. Silakan coba lagi."))
-                .finally(() => {
-                    submitBtn.innerText = "Submit Abstract";
-                    submitBtn.disabled = false;
-                });
-            };
-            reader.readAsDataURL(file);
-        });
     </script>
 </body>
 </html>
